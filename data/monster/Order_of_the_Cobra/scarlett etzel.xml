@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Scarlett Etzel" nameDescription="Scarlett Etzel" race="blood" experience="20000" speed="175" manacost="0">
+	<health now="1230000" max="1230000"/>
+	<look type="324" head="97" body="116" legs="113" feet="85" addons="3"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+		<flag canwalkonenergy="1"/>
+		<flag canwalkonfire="1"/>
+		<flag canwalkonpoison="1"/>
+	</flags>
+	<script>
+	<event name="tpboss"/>
+	</script>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-600"/>
+		<attack name="Sudden Death" interval="2000" chance="16" distance="7" target="1" min="-11400" max="-15600"/>
+		<attack name="holy" interval="2000" chance="13" length="7" spread="0" min="-28450" max="-29040">
+			<attribute key="areaEffect" value="holyarea"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="15" radius="5" min="-12480" max="-14630">
+			<attribute key="areaEffect" value="explosion"/>
+		</attack>
+	</attacks>
+	<defenses armor="88" defense="88"/>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+</monster>

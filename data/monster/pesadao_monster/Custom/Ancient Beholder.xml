@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ancient Beholder" nameDescription="a Ancient Beholder" race="blood" experience="820000" speed="770" manacost="0">
+  <health now="3500000" max="3500000"/>
+  <look type="108" head="20" body="30" legs="40" feet="50"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <script>
+	<event name="tpboss"/>
+	</script>
+  <attacks>
+    <attack name="melee" interval="2000" skill="145" attack="8160"/>
+    <attack name="energy" interval="1000" chance="8" range="7" min="-7045" max="-12075">
+      <attribute key="shootEffect" value="energy"/>
+    </attack>
+    <attack name="fire" interval="1000" chance="7" range="7" min="-10060" max="-13080">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="physical" interval="1000" chance="6" range="7" min="-16700" max="-19090">
+      <attribute key="shootEffect" value="suddendeath"/>
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack name="poison" interval="1000" chance="8" range="7" min="-9030" max="-11700">
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
+    <attack name="lifedrain" interval="1000" chance="6" range="7" min="-750" max="-850">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="lifedrain" interval="1000" chance="6" range="7" min="-750" max="-850">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="manadrain" interval="1000" chance="6" range="7" min="-200" max="-400">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="speed" interval="1000" chance="10" range="7" speedchange="-600" duration="20000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+  </attacks>
+  <defenses armor="13" defense="23"/>
+  <elements>
+  <element energy="20"/>
+  <element icePercent="10"/>
+  <element firePercent="-10"/>
+  </elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="8">
+    <summon name="young beholder" interval="1000" chance="9" max="8"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="Let me take a look at you!"/>
+    <voice sentence="Inferior creatures, bow before my power!"/>
+  </voices>
+</monster>

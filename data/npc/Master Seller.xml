@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Master Seller" script="default.lua" walkinterval="2000" floorchange="0">
+<health now="185" max="185"/>
+<look type="80" head="0" body="0" legs="0" feet="0" corpse="6020"/>
+<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value=""/>
+</parameters>
+</npc>

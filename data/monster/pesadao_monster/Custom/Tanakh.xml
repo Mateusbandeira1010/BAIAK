@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Tanakh" nameDescription="Tanakh" race="fire" experience="2500000" speed="820" manacost="0">
+	<health now="50000000" max="50000000"/>
+	<look type="364"/>
+	<targetchange interval="2000" chance="10"/>
+	<strategy attack="65" defense="20"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="3000"/>
+	</flags>
+	<attacks>
+		<attack name="death room" interval="10000" range="7" chance="80"/>
+		<attack name="melee" interval="1000" min="-12000" max="-13000"/>
+		<attack name="fire" interval="3000" chance="35" range="7" radius="7" target="1" min="-12000" max="-14000">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="melee" interval="1800" chance="40" range="7" radius="5" target="0" min="-12000" max="-15000">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="energy" interval="3000" chance="30" length="8" spread="0" min="-14000" max="-17000">
+			<attribute key="areaEffect" value="energy"/>
+		</attack>
+		<attack name="physical" interval="2500" chance="20" range="7" radius="5" target="0" min="-12000" max="-13500">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="15" range="7" radius="13" target="0" min="-12000" max="-16000">
+			<attribute key="areaEffect" value="rednote"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="20" radius="14" target="0" min="-12000" max="-12500">
+			<attribute key="areaEffect" value="bluebubble"/>
+		</attack>
+		<attack name="melee" interval="3000" chance="15" range="7" radius="3" target="0" min="-1200" max="-13000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="160" defense="160">
+		<defense name="healing" interval="1000" chance="15" min="650" max="650">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="25" min="650" max="850">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="8" speedchange="1901" duration="5000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="1"/>
+		<immunity fire="1"/>
+		<immunity poison="1"/>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<summons maxSummons="1">
+		<summon name="orsbahaal" interval="1000" chance="15" max="1"/>
+	</summons>
+	<script>
+		<event name="PromotionBoss"/>
+	</script>
+</monster>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Hulking Prehemoth" nameDescription="Hulking Prehemoth" race="blood" experience="25000" speed="700" manacost="0">
+	<health now="10300" max="10300"/>
+	<look type="55" corpse="6068"/>
+	<targetchange interval="5000" chance="50"/>
+	<flags>
+		<flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="50"/>
+        <flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-185" max="-292"/>
+		<attack name="fire" interval="2000" chance="35" range="5" radius="2" target="1" min="-200" max="-250">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="fire" interval="2000" chance="35" range="3" radius="5" target="1" min="-200" max="-250">
+            <attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="fireattack"/>
+        </attack>
+	</attacks>
+	<defenses armor="50" defense="50">
+		<defense name="healing" interval="2000" chance="30" min="50" max="100">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+	</defenses>
+	<elements>
+		<element icePercent="-50"/>
+	</elements>
+	<immunities>
+        <immunity fire="1"/>
+        <immunity lifedrain="1"/>
+        <immunity manadrain="1"/>
+        <immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="50">
+		<voice sentence="O inferno esta mais proximo do que voce imagina!"/>
+		<voice sentence="Nao mexa comigo!"/>
+	</voices>
+	<loot capacity="5000">
+<item id="2514" chance="4900"/> <!-- mastermind shield -->
+<item id="2472" chance="2200"/> <!-- magic plate armor -->
+<item id="2470" chance="2350"/> <!-- golden legs -->
+<item id="2520" chance="4100"/> <!-- demon shield -->
+<item id="2492" chance="4100"/> <!-- dragon scale mail -->
+<item id="2476" chance="5100"/> <!-- knight armor -->
+<item id="2152" countmax="30" chance1="100000" chancemax="0"/> <!-- Gold -->
+</loot>
+</monster>

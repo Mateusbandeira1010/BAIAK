@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Sacerdotisa do Rei" nameDescription="Sacerdotisa do Rei" race="blood" experience="75000" speed="300" manacost="530">
+	<health now="60000" max="60000"/>
+	<look type="12" head="95" body="115" legs="0" feet="58" addons="3" mount="0" corpse="6080"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="death" interval="2000" chance="100" range="7" min="-4850" max="-6000">
+			<attribute key="shootEffect" value="death"/>
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>
+		<attack name="manadrain" interval="2000" chance="25" range="7" min="-900" max="-1100">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<immunities>
+        <immunity poison="1"/>
+        <immunity earth="1"/>
+		<immunity death="1"/>
+        <immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+		<immunity invisible="1"/>
+    </immunities>
+	<voices interval="5000" chance="25">
+		<voice sentence="Como ousa invadir nosso reinado?"/>
+		<voice sentence="Arrgh, n?pode me matar!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+	</loot>
+</monster>

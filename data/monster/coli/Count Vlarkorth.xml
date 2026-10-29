@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<monster name="Count Vlarkorth" nameDescription="a Count Vlarkorth" race="undead" experience="30000" speed="600">
+
+
+<health now="109450000" max="109450000"/>
+
+<look type="500" head="0" body="0" legs="85" feet="1" addons="1" corpse="6068"/>
+
+<targetchange interval="5000" chance="8"/>
+
+<strategy attack="100" defense="0"/>
+
+<flags>
+	<flag summonable="0"/>
+	<flag attackable="1"/>
+	<flag hostile="1"/>
+	<flag illusionable="0"/>
+	<flag convinceable="0"/>
+	<flag pushable="0"/>
+	<flag canpushitems="1"/>
+	<flag canpushcreatures="1"/>
+	<flag targetdistance="1"/>
+	<flag staticattack="90"/>
+	<flag runonhealth="0"/>
+</flags>
+
+<attacks>
+
+	<!-- Ataque corpo a corpo -->
+	<attack name="melee" interval="2000" skill="100" attack="3425"/>
+
+	<!-- Ataque físico à distância -->
+	<attack name="physical" interval="1000" chance="15" range="7" min="-1000" max="-5000">
+		<attribute key="shootEffect" value="snowball"/>
+		<attribute key="areaEffect" value="poff"/>
+	</attack>
+
+	<!-- Ataque de destruição -->
+	<attack name="physical" interval="600" chance="20" range="7" min="-720" max="-5720">
+		<attribute key="areaEffect" value="mortarea"/>
+	</attack>
+
+	<!-- Ataque de energia -->
+	<attack name="energy" interval="2000" chance="35" radius="3" target="1" min="-100" max="-500">
+		<attribute key="shootEffect" value="energy"/>
+		<attribute key="areaEffect" value="bigclouds"/>
+	</attack>
+
+	<!-- Ataque físico forte -->
+	<attack name="physical" interval="1200" chance="20" range="7" min="-2620" max="-5720">
+		<attribute key="shootEffect" value="suddendeath"/>
+	</attack>
+
+	<!-- Ataque de gelo -->
+	<attack name="ice" interval="1000" chance="20" range="7" min="-2420" max="-5720">
+		<attribute key="shootEffect" value="ice"/>
+		<attribute key="areaEffect" value="icetornado"/>
+	</attack>
+
+	<!-- Ataque de terra -->
+	<attack name="earth" interval="1100" chance="20" range="7" min="-2320" max="-5720">
+		<attribute key="areaEffect" value="poison"/>
+	</attack>
+
+	<!-- Ataque adicional -->
+	<attack name="death" interval="1200" chance="20" range="7" min="-2420" max="-5720">
+		<attribute key="shootEffect" value="suddendeath"/>
+		<attribute key="areaEffect" value="mortarea"/>
+	</attack>
+
+	<!-- Ataque em área -->
+	<attack name="energy" interval="1000" chance="12" length="3" spread="3" min="0" max="-175">
+		<attribute key="areaEffect" value="poff"/>
+	</attack>
+
+</attacks>
+
+<defenses armor="28" defense="33"/>
+
+<immunities>
+	<immunity invisible="1"/>
+</immunities>
+
+
+
+</monster>

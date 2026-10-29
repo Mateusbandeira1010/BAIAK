@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Goshnar Spite" nameDescription="a Goshnar Spite" race="venom" experience="16000" speed="420" manacost="0">
+	<health now="21500000" max="21500000"/>
+	<look type="19"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<script>
+	<event name="SoulwarBoss2"/>
+	</script>
+	<attacks>
+		<attack name="melee" interval="700" skill="445" attack="19440"/>
+	</attacks>
+	<defenses armor="3" defense="10"/>
+	<elements>
+		<element earthPercent="100"/>
+		<element icePercent="20"/>
+		<element firePercent="-10"/>
+		<element energyPercent="-10"/>
+	</elements>
+</monster>

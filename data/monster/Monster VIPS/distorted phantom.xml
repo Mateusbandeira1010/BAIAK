@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="[VIP] Distorted Phantom" nameDescription="a distorted phantom" race="fire" experience="30000" speed="400">
+	<health now="10000" max="10000" />
+	<look type="349" head="113" body="94" legs="132" feet="76" addons="0" corpse="6068" />
+	<targetchange interval="4000" chance="20" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="70" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-350" />
+		<attack name="manadrain" interval="2000" chance="10" range="7" min="-200" max="-850" />
+		<attack name="fire" interval="2000" chance="20" range="7" radius="7" target="1" min="-200" max="-850">
+			<attribute key="shootEffect" value="fire" />
+			<attribute key="areaEffect" value="firearea" />
+		</attack>
+		<attack name="firefield" interval="2000" chance="10" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="10" length="8" spread="0" min="-200" max="-850">
+			<attribute key="areaEffect" value="purpleenergy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="10" range="1" min="-200" max="-850">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" radius="1" target="1" speedchange="-700" duration="30000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="15" min="180" max="250">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" interval="2000" chance="15" speedchange="320" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Your soul will be mine!" />
+		<voice sentence="MUHAHAHAHA!" />
+		<voice sentence="CHAMEK ATH UTHUL ARAK!" />
+		<voice sentence="I SMELL FEEEEAAAAAR!" />
+		<voice sentence="Your resistance is futile!" />
+	</voices>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="6529" countmax="10" chance="5000"/>
+      <item id="7591" countmax="3" chance="7000"/>                             
+      <item id="2514" chance="10000"/>
+      <item id="2472" chance="10000"/>
+      <item id="2645" chance="10000"/>
+</loot>
+</monster>

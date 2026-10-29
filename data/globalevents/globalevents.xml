@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+
+	<!--scripts-->
+
+	<!--startup-->
+	<globalevent type="startup" name="ServerStartup" script="startup.lua"/>
+	<!--serversave-->
+	<globalevent name="serversave" time="05:55:00" script="serversave.lua"/>
+	<!--record-->
+	<globalevent type="record" name="PlayerRecord" script="record.lua"/>
+	<!-- Global Event para avisar sobre o comando !fly -->
+	<globalevent name="FlyReminder" script="custom/fly.lua" interval="600000"/>
+	<!--Clean/Map-->
+	<globalevent name="Clean" interval="10800000" script="custom/clean.lua"/>
+	<!--save-->
+	<globalevent name="ServerSaveWarning" interval="30800000" script="custom/save.lua" />
+	<!--textEffect-->
+	<globalevent name="TextosBaiak" interval="5000" script="custom/textEffect.lua"/>
+	<!--battlefield-->
+	<globalevent name="Battlefield" interval="60000" script="custom/events/battlefield.lua" />
+	<!--Castle48H-->
+	<globalevent name="Castle48HOpen" time="21:00:00" script="custom/events/castle48h.lua"/>
+	<globalevent name="Castle48HClose" time="22:00:00" script="custom/events/castle48h.lua"/>
+	<!--Spwan Crystal-->
+	<globalevent name="CastleCrystalSpawn" type="startup" script="custom/events/castlecrystalspawn.lua"/>
+	<!--Gesior Shop-->
+	<globalevent name="gesior-shop-system" interval="30000" script="gesior-shop-system.lua"/>
+	<!--Check guild castle24h-->
+	<globalevent name="CastleKickCheck" interval="1000" script="custom/events/castle_crystal_kick.lua"/>
+</globalevents>
+   

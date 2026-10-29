@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Wave13" nameDescription="Wave13" race="fire" experience="100000" speed="1200" manacost="10000">
+  <health now="550000" max="550000"/>
+  <look type="332" corpse="6068"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="90" defense="10"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="1000" chance="30" min="-1625" max="-2267"/>
+    <attack name="manadrain" interval="2000" chance="13" range="7" min="-1625" max="-2267"/>
+    <attack name="fire" interval="2000" chance="30" range="7" radius="7" target="1" min="-1000" max="-2267">
+		<attribute key="shootEffect" value="fire"/>
+		<attribute key="areaEffect" value="firearea"/>
+	</attack>
+    <attack name="lifedrain" interval="1000" chance="12" length="8" spread="0" min="-1625" max="-2267">
+		<attribute key="areaEffect" value="purpleenergy"/>
+	</attack>
+	<attack name="speed" interval="2000" chance="15" target="1" speedchange="-750" duration="30000">
+		<attribute key="shootEffect" value="suddendeath"/>
+	</attack>
+	<attack name="energy" interval="3000" chance="10" range="1" target="1" min="-1625" max="-2267">
+		<attribute key="areaEffect" value="purpleenergy"/>
+	</attack>
+  </attacks>
+  <defenses armor="55" defense="55">
+    <defense name="healing" interval="2000" chance="15" min="900" max="1000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+	<defense name="speed" interval="1000" chance="8" speedchange="290" duration="5000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+	<elements>
+		<element physicalPercent="30"/>
+		<element energyPercent="50"/>
+		<element earthPercent="20"/>
+		<element icePercent="15"/>
+		<element holyPercent="15"/>
+		<element deathPercent="20"/>
+	</elements>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity drown="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="1">
+    <summon name="Chupa Cabra" interval="1000" chance="12"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="Saia do meu castelo!" yell="1"/>
+    <voice sentence="Voce ousa desonrar o Rei?!" yell="1"/>
+    <voice sentence="Tire eles daqui, meu cachorro!" yell="1"/>
+    <voice sentence="Eu sou o rei de todo o continente, nao me perturbe!"/>
+    <voice sentence="SAIAAAA" yell="0"/>
+  </voices>
+  <loot>
+ 	<item id="2160" chance="100"/>
+		        <item id="12575" chance="2000"/>
+			<item id="8306" chance="2000"/>
+			<item id="2152" countmax="3" chance="1000"/> 
+	<item id="6527" countmax="10" chance="3600"/>
+ 	<item id="12396" chance="1000">
+		<inside>
+		 	<item id="9778" chance="980"/>
+		</inside>
+ 	</item>
+</loot>
+</monster>

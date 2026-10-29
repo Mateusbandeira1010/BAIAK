@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="[VIP] Lava Golem" nameDescription="a lava golem" race="fire" experience="16000" speed="400">
+	<health now="10000" max="10000"/>
+	<look type="758" corpse="6068"/>
+	<targetchange interval="5000" chance="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+		<flag canwalkonenergy="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-400"/>
+		<attack name="fire" interval="2000" chance="15" length="8" spread="0" min="-400" max="-1000">
+			<attribute key="areaEffect" value="fireattack"/>
+		</attack>
+		<attack name="manadrain" interval="2000" chance="10" length="8" spread="0" min="-600" max="-1300">
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>
+		<attack name="fire" interval="2000" chance="15" radius="4" target="1" min="-400" max="-1000">
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="speed" interval="2000" chance="10" target="0" length="5" spread="3" speedchange="-800" duration="30000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="fire" interval="2000" chance="30" target="0" radius="3" min="-280" max="-1000">
+			<attribute key="areaEffect" value="fire"/>
+		</attack>
+	</attacks>
+	<defenses armor="60" defense="60"/>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Grrrrunt"/>
+	</voices>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="6529" countmax="10" chance="5000"/>
+      <item id="7591" countmax="3" chance="7000"/>                             
+      <item id="2514" chance="10000"/>
+      <item id="2472" chance="10000"/>
+      <item id="2645" chance="10000"/>                     
+</loot>
+</monster>

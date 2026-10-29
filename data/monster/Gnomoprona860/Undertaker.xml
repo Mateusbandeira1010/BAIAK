@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Undertaker" nameDescription="Undertaker" race="venom" experience="25000" speed="580" manacost="0">
+	<health now="10300" max="10300"/>
+	<look type="347" corpse="6068"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="366"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-250" max="-500"/>
+		<attack name="drunk" interval="2000" chance="10" range="7" radius="2" target="1">
+			<attribute key="areaEffect" value="rednote"/>
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="15" radius="3" target="0" min="-140" max="-150">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="poison" interval="2000" chance="10" range="7" min="-200" max="-300">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="5" defense="35">
+		<defense name="healing" interval="2000" chance="15" min="70" max="100">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="2000" chance="20" speedchange="450" duration="5000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="-10"/>
+		<element holyPercent="10"/>
+	</elements>
+	<immunities>
+		<immunity poison="1"/>
+		<immunity earth="1"/>
+		<immunity death="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="35">
+		<voice sentence="Chegue mais perto!" yell="1"/>
+		<voice sentence="Tiss!" yell="1"/>
+	</voices>
+	<loot capacity="5000">
+<item id="2514" chance="4900"/> <!-- mastermind shield -->
+<item id="2472" chance="2200"/> <!-- magic plate armor -->
+<item id="2470" chance="2350"/> <!-- golden legs -->
+<item id="2520" chance="4100"/> <!-- demon shield -->
+<item id="2492" chance="4100"/> <!-- dragon scale mail -->
+<item id="2476" chance="5100"/> <!-- knight armor -->
+<item id="2477" chance="4800"/> <!-- knight legs -->
+<item id="2498" chance="5800"/> <!-- royal helmet -->
+<item id="2421" chance="4200"/> <!-- thunder hammer -->
+<item id="2466" chance="4200"/> <!-- golden armor -->
+<item id="2152" countmax="55" chance1="100000" chancemax="0"/> <!-- Gold -->
+</loot>
+</monster>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="[VIP] Courage Leech" nameDescription="a courage leech" race="fire" experience="35000" speed="400">
+	<health now="10000" max="10000" />
+	<look type="46" head="0" body="0" legs="0" feet="0" corpse="6068"/>
+	<targetchange interval="4000" chance="20" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="70" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-250" max="-850" />	
+		<attack name="energy" interval="2000" chance="25" range="7" radius="4" target="1" min="-250" max="-850">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="energyarea" />
+		</attack>		
+		<attack name="energy" interval="2000" chance="15" range="1" min="-250" max="-850">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="60">
+		<defense name="healing" interval="2000" chance="25" min="290" max="490">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>		
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>	
+	<voices interval="5000" chance="10">
+		<voice sentence="Zap! Zap!" />
+	</voices>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="6529" countmax="10" chance="5000"/>
+      <item id="7591" countmax="3" chance="7000"/>                             
+      <item id="2514" chance="10000"/>
+      <item id="2472" chance="10000"/>
+      <item id="2645" chance="10000"/>  
+</loot>
+</monster>

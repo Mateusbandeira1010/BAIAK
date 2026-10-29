@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Jamanta" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="134" head="39" body="114" legs="114" feet="85" addons="3"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="Baiakzik Sword,7417,20000000;Baiakzik Axe,8926,20000000;Baiakzik Star,7368,20000000;Baiakzik Club,7451,20000000;Baiakzik Staff,7424,20000000;Addon Doll,9693,3000000;Minotaur backpack,11244,500000;Master Vip Helmet,11302,30000000;Master Vip Armor,11301,30000000;Master Vip Legs,11304,30000000;Master Vip Boost,11303,30000000"/>
+	</parameters>
+1</npc>

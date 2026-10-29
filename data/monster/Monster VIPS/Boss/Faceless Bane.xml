@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Faceless Bane" nameDescription="a Faceless Bane" race="blood" experience="45600" speed="400" manacost="0">
+  <health now="1000000" max="1000000"/>
+	<look type="625" head="0" body="4" legs="95" feet="4" corpse="6068"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+
+    <attack name="melee" interval="2000" skill="71" attack="264"/>
+    <attack name="speed" interval="2000" chance="17" range="7" radius="4" target="1" speedchange="-680" duration="15000">
+      <attribute key="shootEffect" value="poison"/>
+      <attribute key="areaEffect" value="greenbubble"/>
+    </attack>
+    <attack name="ice" interval="2000" chance="14" length="8" spread="4" min="-1000" max="-2500">
+      <attribute key="areaEffect" value="bluebubble"/>
+    </attack>
+    <attack name="earth" interval="2000" chance="12" length="8" spread="3" min="-1000" max="-2500">
+      <attribute key="areaEffect" value="smallplants"/>
+    </attack>
+
+    <attack name="ice" interval="2000" chance="14" range="7" target="1" min="-1000" max="-2500">
+	<attribute key="shootEffect" value="smallice"/>
+    </attack>
+
+  </attacks>
+  <defenses armor="25" defense="35">
+    <defense name="healing" interval="2000" chance="30" min="300" max="480">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element physicalPercent="20"/>
+    <element energyPercent="20"/>
+    <element earthPercent="20"/>
+    <element icePercent="20"/>
+    <element firePercent="20"/>   
+    <element holyPercent="20"/>
+    <element deathPercent="20"/>    
+  </elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="FCHHHHH"/>
+    <voice sentence="HISSSS"/>
+  </voices>
+</monster>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Barbaro do Halloween" nameDescription="Barbaro do Halloween" race="blood" experience="2020000" speed="350" manacost="0">
+	<health now="155000" max="155000"/>
+	<look type="253" head="76" body="115" legs="115" feet="43" corpse="3058"/>
+	<flags>
+		<flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="50"/>
+        <flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-5500" max="-8000"/>
+		<attack name="physical" interval="2000" chance="80" range="5" radius="1" target="1" min="3500" max="-5000">
+			<attribute key="shootEffect" value="piercingbolt"/>
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="50">
+		<defense name="healing" interval="2000" chance="25" min="7500" max="12500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="-20"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="25">
+		<voice sentence="Sua morte será hoje!"/>
+		<voice sentence="Yeehaawh!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="500" chance="100000"/><!-- gold coin -->
+		<item id="2160" countmax="3" chance="20000"/><!-- crystal coin -->
+		<item id="7703" chance="7500"/><!-- documento das amazonas -->
+	</loot>
+</monster>

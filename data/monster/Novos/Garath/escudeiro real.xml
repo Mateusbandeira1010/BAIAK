@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Escudeiro Real" nameDescription="Escudeiro Real" race="blood" experience="8000" speed="600" manacost="530">
+	<health now="1442550" max="1442550"/>
+	<look type="12" head="95" body="39" legs="115" feet="114" addons="0" mount="0" corpse="6080"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1000" min="-1125" max="-1250"/>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<immunities>
+        <immunity poison="1"/>
+        <immunity earth="1"/>
+        <immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+		<immunity invisible="1"/>
+    </immunities>
+	<voices interval="5000" chance="25">
+		<voice sentence="Venha me desafiar!"/>
+		<voice sentence="Venha seu tolo, sinta minha ira!"/>
+		<voice sentence="N??apaz de me vencer, ?"/>
+		<voice sentence="Duvido passares por mim."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2160" countmax="3" chance="100000"/><!-- crystal coin -->
+		<item id="2197" chance="2500"/><!-- stone skin amulet -->
+		<item id="2472" chance="2500"/><!-- magic plate armor -->
+		<item id="2498" chance="2500"/><!-- royal helmet -->
+		<item id="7590" countmax="8" chance="10000"/><!-- frasco de mana gigante -->
+	</loot>
+</monster>

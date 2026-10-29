@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Ice Witch" nameDescription="an ice witch" race="undead" experience="16000" speed="400" manacost="0">
+  <health now="12000" max="12000"/>
+  <look type="149" head="0" body="47" legs="105" feet="105" addons="0" corpse="6068"/>
+  <targetchange interval="2000" chance="5"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="80" attack="130"/>
+	<attack name="ice" interval="1000" chance="7" length="6" spread="3" min="0" max="-300">
+      <attribute key="areaEffect" value="iceattack"/>
+    </attack>
+    <attack name="ice" interval="2000" chance="15" length="4" spread="2" min="-50" max="-300">
+      <attribute key="areaEffect" value="icearea"/>
+    </attack>
+    <attack name="ice" interval="1000" chance="9" range="7" target="1" min="-30" max="-300">
+      <attribute key="shootEffect" value="snowball"/>
+	  <attribute key="areaEffect" value="iceattack"/>
+    </attack>
+    <attack name="speed" interval="1000" chance="11" range="7" speedchange="-700" duration="20000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+  </attacks>
+  <defenses armor="75" defense="70">
+    <defense name="healing" interval="1000" chance="25" min="50" max="80">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="2000" chance="5">
+    <voice sentence="So you think you are cool?"/>
+    <voice sentence="I hope it is not too cold for you! HeHeHe."/>
+    <voice sentence="Freeze!"/>
+  </voices>
+ <loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="7839" countmax="10" chance="5000"/>
+      <item id="5954" countmax="5" chance="7000"/>
+      <item id="2151" countmax="3" chance="7000"/>
+      <item id="9970" countmax="3" chance="7000"/>
+      <item id="8472" countmax="3" chance="7000"/>                             
+      <item id="2520" chance="10000"/>
+      <item id="2466" chance="10000"/>
+      <item id="2470" chance="10000"/>
+      <item id="2432" chance="10000"/>                      
+</loot>
+</monster>
+

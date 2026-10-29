@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Thenebreus" nameDescription="Thenebreus" race="fire" experience="145000" speed="600" manacost="90">
+	<health now="150000" max="150000"/>
+<look type="12" head="2" body="35" legs="57" feet="91" corpse="6068"/>
+<targetchange interval="5000" chance="15"/>
+<strategy attack="100" defense="100"/>
+
+<flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="85"/>
+        <flag runonhealth="0"/>
+</flags>
+
+<attacks>
+	<attack name="melee" interval="2000" skill="240" attack="1000"/>
+	<attack name="physical" interval="1000" chance="10" length="10" spread="0" min="-2500" max="-7000">
+		<attribute key="areaEffect" value="mortarea"/>
+	</attack>
+	<attack name="death" interval="1000" chance="12" radius="5" target="0" min="-3000" max="-6600">
+		<attribute key="areaEffect" value="mortarea"/>
+		<attribute key="shootEffect" value="death"/>
+	</attack>
+	<attack name="earth" interval="1000" chance="15" length="8" spread="0" min="-3000" max="-6585">
+		<attribute key="areaEffect" value="smallplants"/>
+	</attack>
+	<attack name="ice" interval="1000" chance="13" target="0" radius="6" min="2330" max="-4130">
+		<attribute key="areaEffect" value="icetornado"/>
+	</attack>
+	<attack name="drunk" interval="3000" chance="11" radius="6" target="0">
+		<attribute key="areaEffect" value="purplenote"/>
+	</attack>
+	<attack name="energycondition" interval="2000" chance="15" radius="4" target="0" min="-500" max="-500">
+		<attribute key="areaEffect" value="energy"/>
+	</attack>
+</attacks>
+
+<defenses armor="450" defense="550">
+        <defense name="healing" interval="2000" chance="15" min="400" max="900">
+                <attribute key="areaEffect" value="greenshimmer"/>
+        </defense>
+        <defense name="invisible" interval="1000" chance="1" duration="600">
+                <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+</defenses>
+
+<elements>
+    <element icePercent="-15"/>
+    <element energyPercent="-5"/>
+    <element earthPercent="-8"/>
+        <element firePercent="250"/>
+</elements>
+
+<immunities>
+        <immunity death="1"/>
+        <immunity paralyze="1"/>
+        <immunity invisible="1"/>
+</immunities>
+
+<voices interval="5000" chance="10">
+        <voice sentence="Burn, Burn HAHAHA!!" yell="1"/>
+        <voice sentence="One little mistake and your all are mine!"/>
+        <voice sentence="MWA HAHAHAHA!"/>
+        <voice sentence="You is my!!!"/>
+        <voice sentence="Impossible my death!!!"/>
+        <voice sentence="My Creator is Luck!"/>
+</voices>
+
+<loot>
+    <item id="2148" countmax="100000" chance1="100000" chancemax="0"/>
+    <item id="2148" countmax="50000" chance1="100000" chancemax="0"/>
+  
+    <item id="2195" chance="4444" />
+    <item id="2393" chance="3000"/>
+    <item id="2432" chance="5555"/>
+    <item id="2402" chance="10000"/>
+    <item id="2477" chance="6666" />
+    <item id="1987" chance="100000">
+                <inside>
+                        <item id="2151" countmax="11" chance1="6000" chancemax="0"/>
+                        <item id="2462" chance="9700"/>
+                        <item id="2171" chance="2333"/>
+                        <item id="2158" chance="4444"/>
+                        <item id="2470" chance="6500"/>
+                        <item id="2520" chance="9999"/>
+                </inside>
+        </item>
+</loot>
+</monster>

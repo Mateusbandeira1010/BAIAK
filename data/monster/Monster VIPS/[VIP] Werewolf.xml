@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Werewolf" nameDescription="a werewolf" race="blood" experience="16000" speed="400" manacost="0">
+    <health now="10000" max="10000"/>
+    <look type="308" corpse="6068"/>
+    <targetchange interval="5000" chance="50"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="1"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="70"/>
+        <flag runonhealth="100"/>
+    </flags>
+    <attacks>
+             <attack name="melee" interval="2000" skill="80" attack="120" curse="4000"/>
+     <attack name="outfit" interval="5000" chance="90" range="1" type="308" duration="10000">
+     <attribute key="areaeffect" value="bigclouds"/>
+    </attack>
+             <attack name="speed" interval="5000" chance="90" radius="4" range="1" target="1" speedchange="-950" duration="3000">
+             <attribute key="shootEffect" value="death"/>
+    </attack>
+    </attacks>
+    <defenses armor="25" defense="25">
+             <defense name="healing" interval="500" chance="23" min="20" max="40">
+             <attribute key="areaEffect" value="mortarea"/>
+    </defense>
+             <defense name="outfit" interval="6000" chance="90" type="308" duration="3000">
+             <attribute key="areaEffect" value="bigclouds"/>
+    </defense>
+    </defenses>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+    <voices interval="5000" chance="30">
+              <voice sentence="AWWWWWWWWWWWWW" yell="1"/>
+    </voices>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="7839" countmax="10" chance="5000"/>
+      <item id="5954" countmax="5" chance="7000"/>
+      <item id="2151" countmax="3" chance="7000"/>
+      <item id="9970" countmax="3" chance="7000"/>
+      <item id="8472" countmax="3" chance="7000"/>                             
+      <item id="2520" chance="10000"/>
+      <item id="2466" chance="10000"/>
+      <item id="2470" chance="10000"/>
+      <item id="2432" chance="10000"/>                      
+</loot>
+</monster>

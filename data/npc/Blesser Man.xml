@@ -1,0 +1,7 @@
+<npc name="Blesser Man" script="bless.lua" walkinterval="25" floorchange="0">
+    <health now="150" max="150"/>
+    <look type="152" head="114" body="114" legs="0" feet="0" addons="3"/>
+    <parameters>
+        <parameter key="message_greet" value="Ola |PLAYERNAME|, diga hi para receber suas bless." />
+    </parameters>
+</npc>

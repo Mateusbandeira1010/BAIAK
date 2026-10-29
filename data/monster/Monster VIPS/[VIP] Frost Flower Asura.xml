@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Frost Flower Asura" nameDescription="a frost flower asura" race="undead" experience="16000" speed="400" manacost="0">
+	<health now="23000" max="23000"/>
+	<look type="150" head="86" body="0" legs="0" feet="86" addons="3" corpse="6068"/>
+	<targetchange interval="5000" chance="6"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="250"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="100" attack="120"/>
+	<attack name="ice" interval="1200" chance="7" length="6" spread="3" min="0" max="-300">
+      <attribute key="areaEffect" value="iceattack"/>
+    </attack>
+    <attack name="ice" interval="2000" chance="15" length="4" spread="2" min="-50" max="-300">
+      <attribute key="areaEffect" value="icearea"/>
+    </attack>
+    <attack name="ice" interval="1000" chance="9" range="7" target="1" min="-30" max="-300">
+      <attribute key="shootEffect" value="snowball"/>
+	  <attribute key="areaEffect" value="iceattack"/>
+    </attack>
+		<attack name="speed" interval="2000" chance="5" length="8" spread="3" speedchange="-720" duration="5000">
+			<attribute key="areaEffect" value="icearea"/>
+		</attack>
+		<defense name="speed" interval="2000" chance="5" speedchange="360" duration="5000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>	
+	</attacks>
+	<defenses armor="22" defense="35">
+		<defense name="healing" interval="2000" chance="5" min="175" max="225">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="YOU WILL FREEZE!" yell="1"/>
+		<voice sentence="ZCHHHHH!" yell="1"/>
+		<voice sentence="I am so cool" yell="1"/>
+		<voice sentence="Chill out!." yell="1"/>
+	</voices>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="6529" countmax="10" chance="5000"/>
+      <item id="7591" countmax="3" chance="7000"/>                             
+      <item id="2514" chance="10000"/>
+      <item id="2472" chance="10000"/>
+      <item id="2645" chance="10000"/>                     
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</monster>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lobisomem" nameDescription="a Lobisomem" race="undead" experience="11300" speed="900" manacost="7000">
+  <health now="9400" max="9400"/>
+  <look type="308" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="5000"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="1000" skill="150" attack="270"/>
+  </attacks>
+  <defenses armor="15" defense="15">
+    <defense name="healing" interval="2000" chance="45" min="1000" max="2000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+	<elements>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="BLOOD!"/>
+    <voice sentence="HRAAAAAAAAAARRRRRR!"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="80" chance="100000"/> 
+    <item id="2148" countmax="90" chance="8000"/> 
+ 	<item id="1987" chance="0">
+		<inside>
+			<item id="9810"	chance="0"/> 
+			<item id="7884" chance="0" /> 
+			<item id="7885" chance="0" /> 
+		</inside>
+ 	</item>
+  </loot>
+</monster>

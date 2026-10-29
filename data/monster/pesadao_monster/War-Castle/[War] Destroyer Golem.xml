@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="War Destroyer Golem" nameDescription="a War Destroyer Golem" race="energy" experience="345000" speed="800" manacost="0">
+  <health now="80000" max="80000"/>
+  <look type="326" corpse="10005"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+    <flag skull="red"/>
+  </flags>
+    <attacks>
+    <attack name="fire" interval="1000" chance="100" range="5" min="-4430" max="-6760">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="speed" interval="2000" chance="17" range="7" radius="4" target="1" speedchange="-680" duration="15000">
+      <attribute key="shootEffect" value="energy"/>
+    </attack>    
+    <attack name="Energy Wave" interval="1000" chance="12" length="6" spread="3" min="-3790" max="-7090">
+      <attribute key="areaEffect" value="energy wave"/>
+    </attack>
+    <attack name="Rage of the Skies" interval="1350" chance="30" range="7" radius="7" target="1" min="-3650" max="-4950">
+		<attribute key="areaEffect" value="rage of the skies"/>
+    </attack>
+    <attack name="death" interval="1000" chance="14" range="7" target="1" min="-2785" max="-3957">
+	<attribute key="shootEffect" value="suddendeath"/>
+    </attack>
+  </attacks>
+  <defenses armor="22" defense="23">
+    <defense name="healing" interval="1000" chance="12" min="100" max="200">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="1500" chance="10" speedchange="1000" duration="6000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="3000" chance="10">
+    <voice sentence="utani gran hur"/>
+    <voice sentence="Vem team, ajuda aqui!" yell="1"/>
+    <voice sentence="Bot!?"/>    
+    <voice sentence="Aaaah..."/>
+  </voices>
+  <loot capacity="1000">
+<item id="2195" chance="1500"/> <!-- BOH -->
+<item id="1988" chance="4000"> <!-- Normal backpack-->
+<inside>
+<item id="2152" countmax="3" chance="1000"/> <!-- Crystal Coins -->
+<item id="2268" chance="2000"/> <!-- SD -->
+<item id="2293" chance="1500"/> <!-- MW -->
+<item id="7590" countmax="10" chance="1000"/> <!-- Great mana potion -->
+</inside>
+</item>
+ </loot>
+</monster>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Genius Aladin" nameDescription="a genius aladin" race="blood" experience="100310" speed="500" manacost="0">
+  <health now="412000" max="412000"/>
+  <look type="80" head="20" body="30" legs="40" feet="50" corpse="6020"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="100" attack="200"/>
+                <attack name="death" interval="1500" chance="5000" range="50000" radius="50000" target="0" min="-16000" max="-23000">
+        <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack name="death" interval="1000" chance="10" range="7" min="-10000" max="-15500">
+      <attribute key="shootEffect" value="death"/>
+    </attack>
+    <attack name="lifedrain" interval="3000" chance="25" range="7" min="-6550" max="-13050">
+      <attribute key="shootEffect" value="suddendeath"/>
+    </attack>
+  </attacks>
+  <defenses armor="20" defense="10"/>
+  <elements>
+  </elements>
+  <immunities>
+    <immunity ice="1"/>
+    <immunity energy="1"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Simsalabim"/>
+    <voice sentence="Feel the power of my magic, tiny mortal!"/>
+    <voice sentence="Be careful what you wish for."/>
+    <voice sentence="Wishes can come true."/>
+  </voices>
+  <loot>
+<item id="2148" countmax="100" chance1="100000" chancemax="0"/> 
+<item id="2152" countmax="7" chance1="50000" chancemax="0"/>
+  </loot>
+</monster>

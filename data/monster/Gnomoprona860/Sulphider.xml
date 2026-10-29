@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Sulphider" nameDescription="Sulphider" race="blood" experience="25000" speed="550" manacost="210">
+	<health now="10300" max="10300"/>
+	<look type="310" corpse="6068"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-180" max="-300"/>
+		<attack name="manadrain" interval="2000" chance="5" min="-130" max="-100" radius="4" target="0">
+			<attribute key="areaEffect" value="greenbubble"/>
+		</attack>
+		<attack name="speed" interval="2000" chance="15" length="5" spread="0" duration="15000" speedchange="-700">
+			<attribute key="areaEffect" value="smallplants"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="15" range="7" target="1" radius="1" min="90" max="-200">
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="carniphila"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="10" min="-155" max="-180" radius="4" target="1">
+			<attribute key="areaEffect" value="greenspark"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="10" radius="1" target="0">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="20"/>
+	<elements>
+		<element firePercent="-20"/>
+		<element deathPercent="20"/>
+		<element icePercent="20"/>
+		<element holyPercent="20"/>
+	</elements>
+	<immunities>
+		<immunity drunk="1"/>
+		<immunity drown="1"/>
+		<immunity outfit="1"/>
+		<immunity lifedrain="1"/>
+		<immunity manadrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="50">
+		<voice sentence="Knarrrz"/>
+		<voice sentence="Huuhuuhuuuhuuaarrr"/>
+		<voice sentence="Knorrrrrr"/>
+	</voices>
+	<loot capacity="5000">
+<item id="2514" chance="4900"/> <!-- mastermind shield -->
+<item id="2472" chance="2200"/> <!-- magic plate armor -->
+<item id="2470" chance="2350"/> <!-- golden legs -->
+<item id="2520" chance="4100"/> <!-- demon shield -->
+<item id="2492" chance="4100"/> <!-- dragon scale mail -->
+<item id="2476" chance="5100"/> <!-- knight armor -->
+<item id="2152" countmax="30" chance1="100000" chancemax="0"/> <!-- Gold -->
+</loot>
+</monster>

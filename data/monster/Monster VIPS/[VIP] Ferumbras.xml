@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ferumbras" nameDescription="Ferumbras" race="blood" experience="16000" speed="150" manacost="0">
+	<health now="20000000" max="20000000"/>
+	<look type="229" corpse="6068"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+<attack name="melee" interval="2000" min="-1000" max="-2000"/>
+		<attack name="manadrain" interval="2000" chance="100" range="10" min="1500" max="-2500">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="poison" interval="3000" chance="100" radius="10" target="0" min="1500" max="-2500">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="energy" interval="2000" chance="100" radius="10" target="0" min="1500" max="-2500">
+			<attribute key="areaEffect" value="energy"/>
+		</attack>
+		<attack name="manadrain" interval="3000" chance="100" radius="10" target="0" min="1500" max="-2500">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="100" radius="10" target="0" min="1500" max="-2500">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+		<attack name="effect" interval="3000" chance="100" radius="10" target="0" min="1500" max="-2500">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="firecondition" interval="2000" chance="100" range="10" radius="10" target="1" min="1500" max="-2500">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="lifedrain" interval="3000" chance="100" length="8" spread="0" min="1500" max="-2500">
+			<attribute key="areaEffect" value="greenspark"/>
+		</attack>
+	</attacks>
+	<defenses armor="100" defense="120">
+		<defense name="healing" interval="10000" chance="100" min="30000" max="60000">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<voices interval="5000" chance="20">
+		<voice sentence="NOONE WILL STOP ME THIS TIME!" yell="1"/>
+		<voice sentence="THE POWER IS MINE!" yell="1"/>
+	</voices>
+</monster>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Drume" nameDescription="a drume" race="blood" experience="45000" speed="340">
+	<health now="1000000" max="1000000" />
+	<look type="742"  head="38" body="76" legs="57" feet="114" addons="2" corpse="6068"/>
+	<targetchange interval="4000" chance="60" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="70" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-1000" max="-2500" />
+		<attack name="lifedrain" interval="2000" chance="10" range="7" min="-1000" max="-2500" />		
+		<attack name="energy" interval="2000" chance="35" radius="3" min="-1000" max="-2500">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="bigclouds" />
+		</attack>		
+	</attacks>
+	<defenses armor="80" defense="110">
+		<defense name="healing" interval="2000" chance="15" min="1500" max="3000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>		
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+</monster>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Cavaleiro da Sombra" nameDescription="Cavaleiro da Sombra" race="undead" experience="6000" speed="600" manacost="0">
+	<health now="1442550" max="1442550"/>
+	<look type="268" head="114" body="95" legs="114" feet="114" addons="0" mount="0" corpse="3058"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag staticattack="80"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="1200"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-1100" max="-1200"/>
+	</attacks>
+	<defenses armor="16" defense="20">
+		<defense name="healing" interval="1000" chance="30" min="500" max="1000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<loot>
+		<item id="2148" countmax="25" chance="100000"/><!-- gold coin -->
+		<item id="2152" countmax="10" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="16" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="22" chance="100000"/><!-- platinum coin -->
+	</loot>
+</monster>

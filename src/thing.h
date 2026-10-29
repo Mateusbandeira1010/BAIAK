@@ -1,0 +1,47 @@
+// Copyright 2023 The Forgotten Server Authors. All rights reserved.
+// Use of this source code is governed by the GPL-2.0 License that can be found in the LICENSE file.
+
+#ifndef FS_THING_H
+#define FS_THING_H
+
+#include "position.h"
+
+class Tile;
+class Cylinder;
+class Item;
+class Creature;
+class Container;
+
+class Thing
+{
+public:
+	constexpr Thing() = default;
+	virtual ~Thing() = default;
+
+	// non-copyable
+	Thing(const Thing&) = delete;
+	Thing& operator=(const Thing&) = delete;
+
+	virtual Cylinder* getParent() const { return nullptr; }
+	virtual Cylinder* getRealParent() const { return getParent(); }
+
+	virtual void setParent(Cylinder*)
+	{
+		//
+	}
+
+	virtual const Position& getPosition() const;
+	virtual int32_t getThrowRange() const = 0;
+	virtual bool isPushable() const = 0;
+
+	virtual Tile* getTile() { return nullptr; }
+	virtual const Tile* getTile() const { return nullptr; }
+	virtual Item* getItem() { return nullptr; }
+	virtual const Item* getItem() const { return nullptr; }
+	virtual Creature* getCreature() { return nullptr; }
+	virtual const Creature* getCreature() const { return nullptr; }
+
+	virtual bool isRemoved() const { return true; }
+};
+
+#endif

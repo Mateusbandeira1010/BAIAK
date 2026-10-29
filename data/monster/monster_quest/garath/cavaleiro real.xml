@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Cavaleiro Real" nameDescription="Cavaleiro Real" race="blood" experience="18000" speed="400" manacost="530">
+	<health now="515000" max="515000"/>
+	<look type="335" head="97" body="39" legs="115" feet="57" addons="0" mount="0" corpse="6080"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="600" min="-13150" max="-24320"/>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<immunities>
+		<immunity poison="1"/>
+		<immunity earth="1"/>
+        <immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+		<immunity invisible="1"/>
+    </immunities>
+	<voices interval="5000" chance="25">
+		<voice sentence="Knights s?presas f?is comigo. Saia imediatamente!"/>
+		<voice sentence="???"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2152" countmax="10" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="2" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="11" chance="100000"/><!-- platinum coin -->
+		<item id="2475" chance="5000"/><!-- warrior helmet -->
+		<item id="2476" chance="2500"/><!-- knight armor -->
+		<item id="2477" chance="2500"/><!-- knight legs -->
+	</loot>
+</monster>

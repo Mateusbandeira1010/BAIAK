@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Stalking Stalk" nameDescription="a Stalking Stalk" race="blood" experience="25000" speed="700" manacost="0">
+	<health now="10300" max="10300"/>
+	<look type="221" corpse="6068"/>
+	<targetchange interval="4000" chance="10"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="300"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-270" />
+		<attack name="speed" interval="2000" chance="25" range="7" radius="4" target="1" speedchange="-700" duration="15000">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+		<attack name="ice" interval="2000" chance="10" length="8" spread="3" min="-100" max="-250">
+			<attribute key="areaEffect" value="bluebubble" />
+		</attack>
+		<attack name="ice" interval="2000" chance="10" target="1" min="-80" max="-155">
+			<attribute key="shootEffect" value="smallice" />
+		</attack>
+		<attack name="earth" interval="2000" chance="10" length="8" spread="3" min="-66" max="-320">
+			<attribute key="areaEffect" value="carniphila" />
+		</attack>
+	</attacks>
+	<defenses armor="27" defense="27">
+		<defense name="healing" interval="2000" chance="25" min="260" max="407">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="50" />
+		<element holyPercent="30" />
+		<element physicalPercent="-5" />
+		<element energyPercent="-10" />
+	</elements>
+	<immunities>
+		<immunity earth="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="FCHHHHH" yell="1" />
+		<voice sentence="HISSSS" yell="1" />
+	</voices>
+	 <loot capacity="5000">
+<item id="2514" chance="4900"/> <!-- mastermind shield -->
+<item id="2472" chance="2200"/> <!-- magic plate armor -->
+<item id="2470" chance="2350"/> <!-- golden legs -->
+<item id="2520" chance="4100"/> <!-- demon shield -->
+<item id="2492" chance="4100"/> <!-- dragon scale mail -->
+<item id="2476" chance="5100"/> <!-- knight armor -->
+<item id="2152" countmax="30" chance1="100000" chancemax="0"/> <!-- Gold -->
+</loot>
+</monster>

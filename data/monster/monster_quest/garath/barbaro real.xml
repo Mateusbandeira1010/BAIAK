@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Barbaro Real" nameDescription="Barbaro Real" race="blood" experience="7500" speed="240" manacost="530">
+	<health now="387500" max="387500"/>
+	<look type="255" head="20" body="114" legs="20" feet="20" addons="0" mount="0" corpse="6080"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-1280" max="-1920"/>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<immunities>
+		<immunity poison="1"/>
+		<immunity earth="1"/>
+		<immunity death="1"/>
+        <immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+		<immunity invisible="1"/>
+    </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GRRRR GRRRRR!!!"/>
+		<voice sentence="Fuja enquanto pode."/>
+		<voice sentence="AGRHH!!!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2152" countmax="10" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="5" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="8" chance="100000"/><!-- platinum coin -->
+	</loot>
+</monster>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Feiticeira do Halloween" nameDescription="Feiticeira do Halloween" race="blood" experience="5850000" speed="350" manacost="0">
+	<health now="910000" max="910000"/>
+	<look type="264" head="78" body="97" legs="95" feet="95" corpse="3058"/>
+	<flags>
+		<flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="50"/>
+        <flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-15320" max="-19250"/>
+		<attack name="drunk" interval="3000" chance="50" range="5" radius="1" target="1" duration="15000"/>
+		<attack name="speed" interval="4000" chance="55" radius="1" target="1" range="5" duration="12000" speed="-700">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="50">
+		<defense name="healing" interval="2000" chance="25" min="7500" max="12500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="invisible" interval="3000" chance="50" duration="10000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="50"/>
+		<element energyPercent="50"/>
+		<element poisonPercent="50"/>
+		<element icePercent="50"/>
+		<element deathPercent="50"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="25">
+		<voice sentence="Quando chegar a hora, será eu quem o convocará!" yell="1"/>
+		<voice sentence="O perdão não serão dado este ano para vocés humanos tolos!" yell="1"/>
+		<voice sentence="Morte!" yell="1"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="500" chance="100000"/><!-- gold coin -->
+		<item id="2160" countmax="6" chance="20000"/><!-- crystal coin -->
+		<item id="7703" chance="100000"/><!-- documento das amazonas -->
+	</loot>
+</monster>

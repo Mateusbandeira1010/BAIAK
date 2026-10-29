@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Hero" nameDescription="a hero" race="blood" experience="16000" speed="400" manacost="0">
+  <health now="10000" max="10000"/>
+  <look type="73" head="20" body="30" legs="40" feet="50" corpse="6068"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="80" attack="120"/>
+    <attack name="physical" interval="2000" chance="20" range="7" min="-100" max="-400">
+      <attribute key="shootEffect" value="arrow"/>
+    </attack>
+  </attacks>
+  <defenses armor="30" defense="20">
+    <defense name="healing" interval="1000" chance="10" min="200" max="350">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Let's have a fight!"/>
+    <voice sentence="Welcome to my battleground."/>
+    <voice sentence="Have you seen princess Lumelia?"/>
+    <voice sentence="I will sing a tune at your grave."/>
+  </voices>
+ <loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="7839" countmax="10" chance="5000"/>
+      <item id="5954" countmax="5" chance="7000"/>
+      <item id="2151" countmax="3" chance="7000"/>
+      <item id="9970" countmax="3" chance="7000"/>
+      <item id="8472" countmax="3" chance="7000"/>                             
+      <item id="2520" chance="10000"/>
+      <item id="2466" chance="10000"/>
+      <item id="2470" chance="10000"/>
+      <item id="2432" chance="10000"/>                      
+</loot>
+</monster>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Goshnar's Greed" nameDescription="a goshnar's greed" race="fire" experience="60000" speed="450">
+	<health now="1000000" max="1000000" />
+	<look type="767" corpse="6068" />
+	<targetchange interval="4000" chance="20" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="70" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-1000" max="-2500" />
+		<attack name="manadrain" interval="2000" chance="10" range="7" min="-1000" max="-2500" />
+		<attack name="lifedrain" interval="2000" chance="100" radius="8" target="0" min="-1000" max="-2500">
+		<attribute key="areaEffect" value="bluebubble"/>
+	</attack>
+		<attack name="firefield" interval="2000" chance="10" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire" />
+		</attack>
+	<attack name="poisoncondition" interval="2000" chance="12" radius="7" target="0" min="-1000" max="-2500">
+      <attribute key="areaEffect" value="greenspark"/>
+    </attack>
+    <attack name="earth" interval="2000" chance="20" range="7" min="-1000" max="-2500">
+      <attribute key="shootEffect" value="earth"/>
+    </attack>
+    	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="15" min="180" max="250">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" interval="2000" chance="15" speedchange="320" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<summons maxSummons="1">
+		<summon name="fire elemental" interval="2000" chance="10" />
+	</summons>
+	<voices interval="5000" chance="10">
+		<voice sentence="Your soul will be mine!" />
+		<voice sentence="MUHAHAHAHA!" />
+		<voice sentence="CHAMEK ATH UTHUL ARAK!" />
+		<voice sentence="I SMELL FEEEEAAAAAR!" />
+		<voice sentence="Your resistance is futile!" />
+	</voices>
+</monster>

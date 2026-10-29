@@ -1,0 +1,121 @@
+local config = {
+    [1] = { -- Sorcerer
+        items = {
+            {2457, 1, CONST_SLOT_HEAD},     -- helmet
+            {2463, 1, CONST_SLOT_ARMOR},    -- armor
+            {2647, 1, CONST_SLOT_LEGS},     -- legs
+            {2195, 1, CONST_SLOT_NECKLACE}, -- amulet
+            {2516, 1, CONST_SLOT_LEFT},     -- shield
+            {2173, 1, CONST_SLOT_RING},     -- ring
+            {2124, 1, CONST_SLOT_AMMO},     -- ammo
+            {2453, 1, CONST_SLOT_RIGHT}     -- wand
+        },
+        container = {
+            {2789, 50}, -- food
+            {2157, 5},  -- platinum coin (CORRIGIDO)
+            {7620, 1},  -- mana potion
+            {7618, 1},  -- health potion
+            {2554, 1},  -- shovel
+            {2120, 1}   -- rope
+        }
+    },
+
+    [2] = { -- Druid
+        items = {
+            {2457, 1, CONST_SLOT_HEAD},
+            {2463, 1, CONST_SLOT_ARMOR},
+            {2647, 1, CONST_SLOT_LEGS},
+            {2195, 1, CONST_SLOT_NECKLACE},
+            {2516, 1, CONST_SLOT_LEFT},
+            {2173, 1, CONST_SLOT_RING},
+            {2124, 1, CONST_SLOT_AMMO},
+            {2453, 1, CONST_SLOT_RIGHT}
+        },
+        container = {
+            {2789, 50},
+            {2157, 5},
+            {7620, 1},
+            {7618, 1},
+            {2554, 1},
+            {2120, 1}
+        }
+    },
+
+    [3] = { -- Paladin
+        items = {
+            {2457, 1, CONST_SLOT_HEAD},
+            {2463, 1, CONST_SLOT_ARMOR},
+            {2647, 1, CONST_SLOT_LEGS},
+            {2195, 1, CONST_SLOT_NECKLACE},
+            {2516, 1, CONST_SLOT_LEFT},
+            {2173, 1, CONST_SLOT_RING},
+            {2124, 1, CONST_SLOT_AMMO},
+			{7364, 1},
+            {8849, 1, CONST_SLOT_RIGHT} -- bow
+        },
+        container = {
+            {2789, 50},
+            {2157, 5},
+            {7620, 1},
+            {7618, 1},
+            {2554, 1},
+            {2120, 1}
+        }
+    },
+
+    [4] = { -- Knight
+        items = {
+            {2457, 1, CONST_SLOT_HEAD},
+            {2463, 1, CONST_SLOT_ARMOR},
+            {2647, 1, CONST_SLOT_LEGS},
+            {2195, 1, CONST_SLOT_NECKLACE},
+            {2516, 1, CONST_SLOT_LEFT},
+            {2173, 1, CONST_SLOT_RING},
+            {2124, 1, CONST_SLOT_AMMO},
+            {2446, 1, CONST_SLOT_RIGHT} -- weapon
+        },
+        container = {
+            {2789, 50},
+            {2157, 5},
+            {7620, 1},
+            {7618, 1},
+            {2554, 1},
+            {2120, 1}
+        }
+    }
+}
+
+function onLogin(player)
+    local vocation = player:getVocation():getId()
+    local cfg = config[vocation]
+
+    if not cfg then
+        return true
+    end
+
+    -- só no primeiro login
+    if player:getLastLoginSaved() ~= 0 then
+        return true
+    end
+
+    -- 🔥 EQUIPAR ITENS CORRETAMENTE
+    for i = 1, #cfg.items do
+        local item = Game.createItem(cfg.items[i][1], cfg.items[i][2])
+        if item then
+            player:addItemEx(item, true, cfg.items[i][3])
+        end
+    end
+
+    -- 🎒 BACKPACK
+    local backpack = player:addItem(1988)
+    if not backpack then
+        return true
+    end
+
+    -- 📦 ITENS DENTRO DA BP
+    for i = 1, #cfg.container do
+        backpack:addItem(cfg.container[i][1], cfg.container[i][2])
+    end
+
+    return true
+end

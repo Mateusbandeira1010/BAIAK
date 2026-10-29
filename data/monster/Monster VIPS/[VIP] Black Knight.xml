@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Black Knight" nameDescription="a black knight" race="blood" experience="16000" speed="400" manacost="0">
+	<health now="4000" max="4000"/>
+	<look type="131" head="95" body="95" legs="95" feet="95" addons="3" corpse="6068"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="90" attack="130"/>
+		<attack name="physical" interval="2000" chance="20" range="7" min="-100" max="-380">
+			<attribute key="shootEffect" value="spear"/>
+		</attack>
+		<attack name="melee" interval="2000" chance="15" range="7" radius="3" target="0" min="-100" max="-380">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="30"/>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MINE!" yell="1"/>
+		<voice sentence="No prisoners!" yell="1"/>
+		<voice sentence="NO MERCY!" yell="1"/>
+		<voice sentence="By Bolg's Blood!"/>
+		<voice sentence="You're no match for me!"/>
+	</voices>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+ 	    <item id="2148" countmax="100" chance="5000"/>
+	    <item id="2152" countmax="3" chance="5000"/>
+      <item id="2546" countmax="10" chance="5000"/>
+      <item id="6500" countmax="5" chance="7000"/>
+      <item id="2145" countmax="3" chance="7000"/>
+      <item id="7590" countmax="3" chance="7000"/>                             
+ 	    <item id="2492" chance="6500"/>
+      <item id="2498" chance="6500"/>
+      <item id="2195" chance="6500"/>
+      <item id="7402" chance="6500"/>
+      <item id="2414" chance="6500"/>   
+</loot>
+</monster>

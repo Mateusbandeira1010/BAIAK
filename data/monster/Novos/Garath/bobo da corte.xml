@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Bobo Da Corte" nameDescription="Bobo Da Corte" race="blood" experience="18000" speed="600" manacost="310">
+	<health now="1442550" max="1442550"/>
+	<look type="12" head="115" body="115" legs="115" feet="115" addons="3" corpse="3058"/>
+	<targetchange interval="4000" chance="10"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+        <flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1000" min="-1100" max="-1280"/>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<elements>
+		<element icePercent="20"/>
+		<element firePercent="-10"/>
+		<element energyPercent="10"/>
+	</elements>
+	<immunities>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Fa?me companhia para esta noite sangrenta."/>
+		<voice sentence="HAHAHA! Sinta o poder da embriaguez!"/>
+	</voices>
+	<loot>
+		<item id="2152" countmax="50" chance="100000"/><!-- platinum coin -->
+	</loot>
+</monster>

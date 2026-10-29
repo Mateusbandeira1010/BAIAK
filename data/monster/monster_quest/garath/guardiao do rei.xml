@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Guardiao do Rei" nameDescription="Guardiao do Rei" race="blood" experience="200000" speed="300" manacost="0">
+	<health now="4800000" max="4800000"/>
+	<look type="345" corpse="11300"/>
+	<targetchange interval="4000" chance="10"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+        <flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1000" min="-12800" max="-16200"/>
+		<attack name="poison" interval="700" chance="30" length="8" spread="3" min="-10000" max="-20000">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<elements>
+		<element icePercent="20"/>
+		<element firePercent="-10"/>
+		<element energyPercent="10"/>
+	</elements>
+	<immunities>
+		<immunity poison="1"/>
+		<immunity earth="1"/>
+		<immunity lifedrain="1"/>
+		<immunity manadrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Deixe-nos antes que seja tarde demais."/>
+	</voices>
+	<loot>
+		<item id="2152" countmax="50" chance="100000"/><!-- platinum coin -->
+	</loot>
+</monster>

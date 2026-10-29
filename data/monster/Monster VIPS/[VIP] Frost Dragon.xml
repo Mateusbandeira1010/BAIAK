@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Frost Dragon" nameDescription="a frost dragon" race="undead" experience="16000" speed="400" manacost="0">
+	<health now="6500" max="6500"/>
+	<look type="248" corpse="6068"/>
+	<targetchange interval="5000" chance="6"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="250"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="100" attack="120"/>
+		<attack name="physical" interval="2000" chance="12" range="7" target="1" min="-100" max="-380">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="8" length="8" spread="3" min="-0" max="-380">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+		<attack name="speed" interval="2000" chance="5" length="8" spread="3" speedchange="-720" duration="5000">
+			<attribute key="areaEffect" value="icearea"/>
+		</attack>
+		<attack name="speed" interval="2000" chance="5" radius="4" target="1" speedchange="-500" duration="5000">
+			<attribute key="shootEffect" value="ice"/>
+			<attribute key="areaEffect" value="icearea"/>
+		</attack>
+		<attack name="ice" interval="2000" chance="5" radius="4" target="1" min="-100" max="-380">
+			<attribute key="shootEffect" value="ice"/>
+			<attribute key="areaEffect" value="icearea"/>
+		</attack>
+		<attack name="ice" interval="2000" chance="5" radius="3" target="0" min="-100" max="-380">
+			<attribute key="areaEffect" value="icearea"/>
+		</attack>
+		<attack name="speed" interval="2000" chance="5" radius="3" target="0" speedchange="-500" duration="5000">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+		<defense name="speed" interval="2000" chance="5" speedchange="360" duration="5000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>	
+	</attacks>
+	<defenses armor="22" defense="35">
+		<defense name="healing" interval="2000" chance="5" min="175" max="225">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="YOU WILL FREEZE!" yell="1"/>
+		<voice sentence="ZCHHHHH!" yell="1"/>
+		<voice sentence="I am so cool" yell="1"/>
+		<voice sentence="Chill out!." yell="1"/>
+	</voices>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+ 	    <item id="2148" countmax="100" chance="5000"/>
+	    <item id="2152" countmax="3" chance="5000"/>
+      <item id="2546" countmax="10" chance="5000"/>
+      <item id="6500" countmax="5" chance="7000"/>
+      <item id="2145" countmax="3" chance="7000"/>
+      <item id="7590" countmax="3" chance="7000"/>                             
+ 	    <item id="2492" chance="6500"/>
+      <item id="2498" chance="6500"/>
+      <item id="2195" chance="6500"/>
+      <item id="7402" chance="6500"/>
+      <item id="2414" chance="6500"/>   
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</monster>

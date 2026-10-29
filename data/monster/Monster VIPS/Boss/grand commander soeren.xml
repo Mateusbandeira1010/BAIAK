@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Grand Commander Soeren" nameDescription="Grand Commander Soeren" race="blood" experience="50000" speed="410">
+	<health now="500000" max="500000"/>
+	<look type="623" head="38" body="94" legs="38" feet="86" addons="2" corpse="6068"/>
+	<targetchange interval="5000" chance="8"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="70"/>
+		<flag runonhealth="0"/>
+		<flag canwalkonenergy="0"/>
+		<flag canwalkonfire="0"/>
+		<flag canwalkonpoison="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1000" min="-300" max="-700"/>
+		<attack name="physical" interval="2000" chance="20" range="7" min="-1000" max="-2500">
+			<attribute key="shootEffect" value="royalspear"/>
+		</attack>
+		<attack name="holy" interval="2000" chance="14" length="8" spread="0" min="-1000" max="-2500">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+	</attacks>
+	<defenses armor="82" defense="50">
+		<defense name="healing" interval="2000" chance="20" min="200" max="650">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+</monster>

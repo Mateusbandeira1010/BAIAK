@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pumpkin Mummy" nameDescription="Pumpkin Mummy" race="blood" experience="100000" speed="350" manacost="0">
+	<health now="100000" max="100000"/>
+	<look type="12" head="114" body="114" legs="114" feet="114" corpse="3058" addons="3"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="50"/>
+        <flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-750" max="-1500"/>
+	</attacks>
+	<defenses armor="50" defense="50">
+		<defense name="healing" interval="2000" chance="25" min="3500" max="5000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="50">
+		<voice sentence="O caos serão espalhado por este deserto!" yell="1"/>
+		<voice sentence="Todos sucumbirãoo!" yell="1"/>
+	</voices>
+	<loot>
+		<item id="2688" countmax="5" chance="5000"/><!-- candy cane -->
+		<item id="6569" countmax="5" chance="5000"/><!-- candy -->
+		<item id="9005" countmax="5" chance="5000"/><!-- yummy gummy worm -->
+	</loot>
+</monster>

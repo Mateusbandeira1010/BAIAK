@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Guerreiro do Halloween" nameDescription="Guerreiro do Halloween" race="blood" experience="2320000" speed="450" manacost="0">
+	<health now="265000" max="265000"/>
+	<look type="254" head="0" body="77" legs="77" feet="114" corpse="3058"/>
+	<targetchange interval="60000" chance="0"/>
+	<flags>
+		<flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="50"/>
+        <flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-11200" max="-13450"/>
+	</attacks>
+	<defenses armor="50" defense="50">
+		<defense name="healing" interval="2000" chance="25" min="7500" max="12500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="-20"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="25">
+		<voice sentence="Louvado seja o Demonio do Halloween!"/>
+		<voice sentence="Morte aos humanos!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="500" chance="100000"/><!-- gold coin -->
+		<item id="2160" countmax="3" chance="20000"/><!-- crystal coin -->
+		<item id="7703" chance="7500"/><!-- documento das amazonas -->
+	</loot>
+</monster>

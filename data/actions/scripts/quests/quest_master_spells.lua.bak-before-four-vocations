@@ -1,0 +1,26 @@
+local config = {
+    storage = 44854,
+    uniqueid = 60000
+}
+
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+    local questStatus = player:getStorageValue(config.storage)
+
+    if questStatus ~= 10 then
+        player:setStorageValue(config.storage, 10)
+
+        player:sendTextMessage(
+            MESSAGE_EVENT_ADVANCE,
+            "Voce desbloqueou a magia Eternal Master Frigo!"
+        )
+
+        player:getPosition():sendMagicEffect(CONST_ME_MAGIC_GREEN)
+    else
+        player:sendTextMessage(
+            MESSAGE_EVENT_ADVANCE,
+            "Voce ja desbloqueou a magia Eternal Master Frigo."
+        )
+    end
+
+    return true
+end

@@ -1,0 +1,18 @@
+REMOCAO DA CHECAGEM DA DLL - 28/10/2026
+
+Removida a checagem antiga da DLL de toda esta source:
+- sendDllCheck, envio no reconnect/login e chamada periodica no player;
+- encaminhamento da checagem aos espectadores;
+- opcoes dllCheckKick e dllCheckKickTime no ConfigManager;
+- lastDllCheck, dllCheckSequence, chave, XOR e Base64 exclusivos da checagem;
+- pacote 0xBB usado pela checagem.
+
+Nenhuma outra rotina do servidor foi alterada. O protocolo existente foi
+usado como referencia para ajustar a DLL entregue no outro ZIP.
+Se houver dllCheckKick/dllCheckKickTime no config.lua do servidor completo,
+essas opcoes deixam de ser usadas e podem ser apagadas desse arquivo.
+
+Esta entrega contem a pasta de source, nao o projeto completo do servidor.
+Nao foi possivel compilar o servidor isoladamente: faltam o CMake principal,
+as dependencias e os demais arquivos do projeto completo.
+A DLL correspondente foi compilada e verificada separadamente.

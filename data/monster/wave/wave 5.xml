@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Wave 5" nameDescription="dead" race="blood" experience="5500" speed="200" manacost="0">
+    <health now="55500" max="55500"/>
+    <look type="276" head="85" body="85" legs="85" feet="85"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="65" defense="5"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="0"/>
+      <flag convinceable="0"/>
+      <flag pushable="0"/>
+      <flag canpushitems="1"/>
+      <flag canpushcreatures="1"/>
+      <flag targetdistance="1"/>
+      <flag staticattack="90"/>
+      <flag runonhealth="0"/>
+    </flags>
+    <attacks>
+      <attack name="melee" interval="2500" skill="150" attack="50" fire="120"/>
+      <attack name="ice" interval="800" chance="100" range="7" radius="1" target="1" min="-600" max="-850">
+        <attribute key="shootEffect" value="SHIVERARROW"/>
+		<attribute key="areaEffect" value="icearea"/>
+      </attack>
+    </attacks>
+    <defenses armor="200" defense="200">
+      <defense name="healing" interval="5000" chance="100" min="500" max="500">
+                        <attribute key="shootEffect" value="death"/>
+      </defense>
+    </defenses>
+    <immunities>
+      <immunity physical="0"/>
+      <immunity energy="0"/>
+      <immunity fire="0"/>
+      <immunity poison="0"/>
+      <immunity lifedrain="1"/>
+      <immunity paralyze="1"/>
+      <immunity outfit="1"/>
+      <immunity drunk="1"/>
+      <immunity invisible="1"/>
+    </immunities>
+    <voices interval="5000" chance="100">
+      <voice sentence="" yell="1"/>
+    </voices>
+    <loot capacity="5000">
+      <item id="2160" countmax="15" chance="12500"/>
+    </loot>
+  </monster>

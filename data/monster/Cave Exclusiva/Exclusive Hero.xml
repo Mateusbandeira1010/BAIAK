@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Exclusive Hero" nameDescription="a hero" race="blood" experience="22000" speed="400" manacost="0">
+  <health now="6000" max="6000"/>
+  <look type="73" head="20" body="30" legs="40" feet="50" corpse="6068"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="100" attack="150"/>
+    <attack name="physical" interval="2000" chance="20" range="7" min="-100" max="-200">
+      <attribute key="shootEffect" value="arrow"/>
+    </attack>
+  </attacks>
+  <defenses armor="30" defense="20">
+    <defense name="healing" interval="1000" chance="10" min="200" max="350">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+  <element firePercent="30"/>
+    <element physicalPercent="25"/>
+	<element holyPercent="25"/>
+	  <element deathPercent="-20"/>
+	    <element earthPercent="50"/>
+		  <element energyPercent="25"/>
+		    <element icePercent="15"/>
+			</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Let's have a fight!"/>
+    <voice sentence="Welcome to my battleground."/>
+    <voice sentence="Have you seen princess Lumelia?"/>
+    <voice sentence="I will sing a tune at your grave."/>
+  </voices>
+  <loot>
+      <item id="2152" countmax="2" chance="10000"/>
+      <item id="2148" countmax="100" chance="6000"/>
+      <item id="2152" countmax="3" chance="6000"/>
+      <item id="2514" chance="6000"/>
+      <item id="2472" chance="6000"/>
+      <item id="2795" countmax="6" chance1="4000"/>
+      <item id="5906" countmax="1" chance="6000"/> 
+      <item id="5954" countmax="1" chance="6000"/>
+      <item id="2164" chance="6000"/>
+      <item id="2176" chance="6000"/>
+      <item id="1982" chance="6000"/>
+      <item id="2165" chance="6000"/>
+      <item id="7591" chance="6000"/>
+      <item id="2393" chance="6000"/>
+      <item id="2432" chance="6000"/>
+      <item id="2214" chance="6000"/>
+      <item id="2396" chance="6000" />  
+      <item id="2795" countmax="6" chance="6000"/>
+      <item id="2678" countmax="3" chance="6000"/>
+      <item id="2148" countmax="100" chance="6000"/>
+      <item id="2151" countmax="4" chance="6000"/>
+      <item id="2462" chance="6000"/>
+      <item id="2171" chance="6000"/>
+      <item id="2387" chance="6000"/>
+      <item id="2470" chance="6000"/>
+            <item id="7382" chance="6000"/>
+      <item id="7393" chance="6000"/>
+      <item id="2520" chance="6000"/>
+      <item id="2418" chance="6000"/>
+    <item id="1988" chance="100000">      
+        <inside>
+      <item id="2476" chance="6000"/>
+      <item id="2536" chance="6000"/>
+      <item id="9808" chance="6000"/>
+      <item id="7887" chance="6000"/>
+      <item id="7885" chance="6000"/>
+      <item id="7413" chance="6000"/>
+      <item id="2148" countmax="100" chance="6000" />
+      <item id="2148" countmax="100" chance="6000" />
+      <item id="2152" countmax="2" chance="60000" />
+      <item id="2671" chance="6000" />
+      <item id="11193" chance="6000" />
+      <item id="2476" chance="6000" />
+      <item id="2214" chance="6000" />
+      <item id="2536" chance="6000" />
+      <item id="2475" chance="6000" />
+      <item id="2177" chance="6000" />
+      <item id="4850" chance="6000" />
+      <item id="2197" chance="6000" />
+      <item id="7589" chance="6000" />
+      <item id="2498" chance="6000" />
+      <item id="2195" chance="6000" />
+        </inside>
+    </item>      
+</loot> 
+</monster>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Cyclops Smith" nameDescription="a cyclops smith" race="blood" experience="16000" speed="400" manacost="695">
+	<health now="6000" max="6000"/>
+	<look type="277" corpse="6068"/>
+	<targetchange interval="2000" chance="5"/>
+	<strategy attack="70" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="80" attack="130"/>
+		<attack name="physical" interval="2000" chance="10" range="7" min="-100" max="-380">
+			<attribute key="shootEffect" value="whirlwindclub"/>
+		</attack>
+	</attacks>
+	<defenses armor="17" defense="24"/>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Outis emoi g' onoma."/>
+		<voice sentence="Whack da humy!"/>
+		<voice sentence="Ai humy phary ty kaynon"/>
+	</voices>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+ 	    <item id="2148" countmax="100" chance="5000"/>
+	    <item id="2152" countmax="3" chance="5000"/>
+      <item id="2546" countmax="10" chance="5000"/>
+      <item id="6500" countmax="5" chance="7000"/>
+      <item id="7590" countmax="3" chance="7000"/>                             
+ 	    <item id="2492" chance="6500"/>
+      <item id="2498" chance="6500"/>
+      <item id="2195" chance="6500"/>
+      <item id="7402" chance="6500"/>
+      <item id="2414" chance="6500"/>   
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</monster>

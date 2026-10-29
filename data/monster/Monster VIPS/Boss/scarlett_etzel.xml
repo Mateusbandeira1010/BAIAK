@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Scarlett Etzel" nameDescription="Scarlett Etzel" race="blood" experience="50000" speed="400" manacost="0">
+	<health now="1000000" max="1000000"/>
+	<look type="618" head="97" body="116" legs="113" feet="85" addons="3" corpse="6068"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+		<flag canwalkonenergy="1"/>
+		<flag canwalkonfire="1"/>
+		<flag canwalkonpoison="1"/>
+	</flags>
+	<attacks>
+		<!-- Ataque corpo a corpo -->
+		<attack name="melee"	interval="1000"	min="-1000"	max="-2500"/>
+		<!-- Sudden Death -->
+		<attack name="death"	interval="2000"	chance="16"	range="7"	target="1"	min="-1000"	max="-2500">
+			<attribute key="shootEffect" value="suddendeath"/>
+		</attack>
+		<!-- Holy -->
+		<attack name="holy"	interval="2000"	chance="13"	length="7"	spread="0"	min="-1000"	max="-2500">
+			<attribute key="areaEffect" value="holyarea"/>
+		</attack>
+		<!-- Earth -->
+		<attack name="earth"	interval="2000"	chance="15"	radius="5"	min="-1000"	max="-2500">
+			<attribute key="areaEffect" value="explosion"/>
+		</attack>
+	</attacks>
+	<defenses armor="88" defense="88"/>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+</monster>

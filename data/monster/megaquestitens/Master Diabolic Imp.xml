@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Master Diabolic Imp" nameDescription="a master diabolic imp" race="blood" experience="2900" speed="350" manacost="0">
+  <health now="14950" max="14950"/>
+  <look type="237" corpse="6364"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="70" attack="80"/>
+    <attack name="fire" interval="1000" chance="8" range="7" radius="4" target="1" min="-550" max="-1350">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="fire" interval="2000" chance="16" range="7" radius="2" target="1" min="-1190" max="-1500">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="15" defense="15">
+    <defense name="healing" interval="2000" chance="22" min="175" max="245">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="2000" chance="18" speedchange="20" duration="4000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+    <defense name="invisible" interval="3000" chance="18" duration="2000"> --each 4 sec invi duration 4 sec
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+	<elements>
+		<element earthPercent="10"/>
+		<element icePercent="-20"/>
+		<element holyPercent="-15"/>
+		<element deathPercent="10"/>
+	</elements>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Muahaha!"/>
+    <voice sentence="He he he!"/>
+  </voices>
+  <loot>
+   <item id="2148" countmax="95" chance1="100000" chancemax="0"/>
+   <item id="2148" countmax="90" chance1="100000" chancemax="0"/>
+   <item id="2152" countmax="7" chance1="35000" chancemax="0"/> 
+   <item id="2050" chance="15000"/>
+   <item id="6558" chance="11000"/>
+   <item id="6558" chance="13000"/> 
+   <item id="2260" chance="18000"/> 
+   <item id="1987" chance="100000">
+         <inside>
+         <item id="2548" chance="25000"/> 
+		 <item id="6558" chance="6666"/>
+		 <item id="6529" countmax="5" chance1="5000" chancemax="0"/>
+         <item id="2185" chance="3500" />
+         <item id="2464" chance="7887"/>
+         <item id="5944" chance="5666"/> 
+         <item id="7899" chance="1500"/>
+         <item id="7900" chance="3900"/>
+         <item id="6500" countmax="1" chance1="7777" chancemax="0"/>
+         <item id="2165" chance="4555"/>
+         </inside>
+       </item>
+ </loot>
+</monster>

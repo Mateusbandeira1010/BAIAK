@@ -1,0 +1,120 @@
+local soulCondition = Condition(CONDITION_SOUL, CONDITIONID_DEFAULT)
+soulCondition:setTicks(4 * 60 * 1000)
+soulCondition:setParameter(CONDITION_PARAM_SOULGAIN, 1)
+
+local event = Event()
+function event.onGainExperience(player, source, exp, rawExp, sendText)
+    if not source or source:isPlayer() then return exp end
+
+    -- Soul regeneration
+    local vocation = player:getVocation()
+    if player:getSoul() < vocation:getMaxSoul() and exp >= player:getLevel() then
+        soulCondition:setParameter(CONDITION_PARAM_SOULTICKS, vocation:getSoulGainTicks() * 1000)
+        player:addCondition(soulCondition)
+    end
+
+    -- Apply experience stage multiplier
+    local stage = Game.getExperienceStage(player:getLevel())
+    exp = exp * stage
+
+    -- Stamina modifier
+    player:updateStamina()
+
+    -- Experience Rates
+    local staminaRate = player:getExperienceRate(ExperienceRateType.STAMINA)
+    if staminaRate ~= 100 then exp = exp * staminaRate / 100 end
+
+    local baseRate = player:getExperienceRate(ExperienceRateType.BASE)
+    if baseRate ~= 100 then exp = exp * baseRate / 100 end
+
+    local lowLevelRate = player:getExperienceRate(ExperienceRateType.LOW_LEVEL)
+    if lowLevelRate ~= 100 then exp = exp * lowLevelRate / 100 end
+
+    local bonusRate = player:getExperienceRate(ExperienceRateType.BONUS)
+    if bonusRate ~= 100 then exp = exp * bonusRate / 100 end
+
+    -- ============================================================
+    -- Bonus XP Castle 24H (20%) e Castle 48H (25%)
+    -- ============================================================
+    local guild = player:getGuild()
+    if guild then
+        local guildId = guild:getId()
+
+        -- Castle 24H: 20% bonus para guild dominante
+        local owner24h = CASTLE24H:getGuildIdFromCastle()
+        if owner24h and owner24h > 0 and guildId == owner24h then
+            exp = math.floor(exp * (1 + CASTLE24H.bonusXP / 100))
+        end
+
+        -- Castle 48H: 25% bonus para guild dominante
+        local owner48h = Castle48H:getOwnerGuildId()
+        if owner48h and owner48h > 0 and guildId == owner48h then
+            exp = math.floor(exp * (1 + Castle48H.bonusXP / 100))
+        end
+    end
+    -- ===========================================================
+
+     -- Double XP Potion
+    local doubleXp = player:getStorageValue(722362)
+    if doubleXp and doubleXp > os.time() then
+        -- verifica se não está recebendo bônus de castle
+        local guild = player:getGuild()
+        local hascastle = false
+        if guild then
+            local guildId = guild:getId()
+            local owner24h = CASTLE24H:getGuildIdFromCastle()
+            local owner48h = Castle48H:getOwnerGuildId()
+            if (owner24h and owner24h > 0 and guildId == owner24h) or
+               (owner48h and owner48h > 0 and guildId == owner48h) then
+                hascastle = true
+            end
+        end
+        if not hascastle then
+            exp = exp * 2
+        end
+    end
+
+    return exp
+end
+event:register()
+
+local message = Event()
+local expTracker = {}
+function message.onGainExperience(self, source, exp, rawExp, sendText)
+    if sendText and exp ~= 0 then
+        local monsterName = source and source:getName() or "Unknown"
+        local playerId = self:getGuid()
+        if not expTracker[playerId] then expTracker[playerId] = {} end
+        if not expTracker[playerId][monsterName] then expTracker[playerId][monsterName] = { totalExp = 0, count = 0, timer = 0 } end
+        expTracker[playerId][monsterName].totalExp = expTracker[playerId][monsterName].totalExp + exp
+        expTracker[playerId][monsterName].count = expTracker[playerId][monsterName].count + 1
+        expTracker[playerId][monsterName].timer = os.time()
+        if not self then return false end
+        addEvent(function()
+            if not self:isPlayer() then return end
+            local expValue = math.floor(expTracker[playerId][monsterName].totalExp + 0.5)
+            local count = expTracker[playerId][monsterName].count
+            if expValue > 0 then
+                local expString = expValue .. (expValue ~= 1 and " experience points" or " experience point")
+                local message = "You gained " .. expString .. " for killing "
+                if count > 1 then
+                    message = message .. count .. " " .. monsterName .. "s."
+                else
+                    message = message .. monsterName .. "."
+                end
+                self:sendTextMessage(MESSAGE_STATUS_DEFAULT, message)
+                Game.sendAnimatedText(tostring(expValue), self:getPosition(), 215)
+                local spectators = Game.getSpectators(self:getPosition(), false, true)
+                for _, spectator in ipairs(spectators) do
+                    if spectator ~= self then
+                        spectator:sendTextMessage(MESSAGE_STATUS_DEFAULT, self:getName() .. " gained " .. expString .. " for killing " .. (count > 1 and count .. " " or "") .. monsterName .. (count > 1 and "s" or "") .. ".")
+                    end
+                end
+            end
+            expTracker[playerId][monsterName].totalExp = 0
+            expTracker[playerId][monsterName].count = 0
+        end, 50)
+    end
+    return exp
+end
+message:register(math.huge)

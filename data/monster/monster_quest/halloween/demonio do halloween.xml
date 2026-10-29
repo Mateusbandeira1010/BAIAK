@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Demonio do Halloween" nameDescription="Demonio do Halloween" race="undead" experience="100000000" speed="1000" manacost="0">
+	<health now="50000000" max="50000000"/>
+	<look type="292" corpse="0"/>
+    <targetchange interval="5000" chance="20"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="5"/>
+        <flag staticattack="50"/>
+        <flag runonhealth="0"/>
+    </flags>
+	<immunities>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="75">
+		<voice sentence="Eu tinha a lebre do dia das bruxas para o café a manhã!"/>
+		<voice sentence="Doces ou travessuras?"/>
+		<voice sentence="Eu vi a morte!"/>
+		<voice sentence="Eu sou o verdadeiro terror do Hallowen!"/>
+		<voice sentence="Eu sou o esperito do Hallowen!"/>
+	</voices>
+</monster>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Saco de Pancada" script="loot.lua" walkinterval="2000" floorchange="0">
+<look typeex="5787" head="0" body="0" legs="0" feet="0" corpse="3128"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+                                   <parameter key="message_greet" value=""/>
+		<parameter key="shop_sellable" value="mastermind shield,2514,1000000;magic plate armor,2472,1000000;"/>
+		<parameter key="shop_buyable" value="mastermind shield,2514,1;magic plate armor,2472,1;Crystal Coin,2160,1;norseman doll,8982,1;norseman doll,8985,1;Lamp,2344,1;"/>
+	</parameters>
+</npc>

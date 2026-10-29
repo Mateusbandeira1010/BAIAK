@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Goshnar Hatred" nameDescription="a Goshnar Hatred" race="blood" experience="124650" speed="450" manacost="0">
+	<health now="17350000" max="17350000"/>
+	<look type="247"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<script>
+	<event name="SoulwarBoss3"/>
+	</script>
+	<attacks>
+		<attack name="melee" interval="2000" skill="90" attack="4100"/>
+		<attack name="physical" interval="3000" chance="17" range="7" min="-17060" max="-20600">
+			<attribute key="shootEffect" value="throwingknife"/>
+		</attack>
+		<attack name="physical" interval="3000" chance="17" length="4" spread="3" min="-8870" max="-12300">
+			<attribute key="areaEffect" value="purplenote"/>
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="35">
+		<defense name="healing" interval="1000" chance="50" min="7500" max="9250">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="90"/>
+		<element energyPercent="30"/>
+		<element deathPercent="10"/>
+		<element icePercent="-10"/>
+		<element holyPercent="-10"/>
+	</elements>
+	<immunities>
+		<immunity fire="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="3000" chance="30">
+		<voice sentence="You like it, don't you?"/>
+		<voice sentence="IahaEhheAie!"/>
+		<voice sentence="It's party time!"/>
+		<voice sentence="Harrr, Harrr!"/>
+		<voice sentence="The torturer is in!"/>
+	</voices>
+</monster>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Rei Garath" nameDescription="a Rei Garath" race="blood" experience="18200000" speed="890" manacost="0">
+    <health now="5500000" max="5500000"/>
+  <look type="328" head="58" body="115" legs="115" feet="115" addons="3"/>	
+    <targetchange interval="5000" chance="10"/>
+    <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <script>
+	<event name="garathbosses"/>
+	</script>
+	<attacks>
+               <attack name="melee" interval="700" skill="600" attack="800"/>
+		<attack name="fire" interval="1000" chance="20" range="7" radius="7" target="1" min="-32000" max="-43000">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="fireattack"/>
+		</attack>
+	</attacks>
+  <defenses armor="15" defense="15">
+      <defense name="healing" interval="500" chance="30" min="4000" max="8000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<voices interval="3000" chance="20">
+    <voice sentence="Vamos mostre sua força!"/>
+    <voice sentence="Vai pagar por tudo que fez ao meu reino"/>
+    <voice sentence="Seus ataques são fracos comparados ao meu poder"/>
+  </voices>
+</monster>

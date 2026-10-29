@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Brain Squid" nameDescription="a brain squid" race="undead" experience="18000" speed="415">
+	<health now="10000" max="10000"/>
+	<look type="316" head="97" body="18" legs="61" feet="85" corpse="6068"/>
+	<targetchange interval="5000" chance="8"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-100" max="-200"/>
+		<attack name="energy" interval="2000" chance="15" range="7" min="-200" max="-470">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+		<attack name="energy" interval="2000" chance="13" radius="3" min="-200" max="-505">
+			<attribute key="areaEffect" value="energyarea"/>
+		</attack>
+	</attacks>
+	<defenses armor="82" defense="40"/>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element firePercent="20"/>		
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>		
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+<loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="7839" countmax="10" chance="5000"/>
+      <item id="5954" countmax="5" chance="7000"/>
+      <item id="2151" countmax="3" chance="7000"/>
+      <item id="9970" countmax="3" chance="7000"/>
+      <item id="8472" countmax="3" chance="7000"/>                             
+      <item id="2520" chance="10000"/>
+      <item id="2466" chance="10000"/>
+      <item id="2470" chance="10000"/>
+      <item id="2432" chance="10000"/>                      
+</loot>
+</monster>

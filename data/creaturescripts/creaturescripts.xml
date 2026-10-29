@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creaturescripts>
+	<event type="login" name="FirstItems" script="firstitems.lua" />
+	<event type="login" name="RegenerateStamina" script="regeneratestamina.lua" />
+	<event type="death" name="PlayerDeath" script="playerdeath.lua" />
+	<event type="death" name="DropLoot" script="droploot.lua" />
+	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
+	<event type="login" name="PlayerLogin" script="login.lua" />
+	<event type="logout" name="PlayerLogout" script="logout.lua" />
+	<event type="healthchange" name="DodgeCritHealth" script="custom/dodgeCritical.lua"/>
+	<event type="manachange" name="DodgeCritMana" script="custom/dodgeCritical.lua"/>
+	<event type="preparedeath" name="BattlefieldDeath" script="custom/events/events.lua"/>
+	<event type="kill" name="BattlefieldKill" script="custom/events/events.lua"/>
+  	<event type="death" name="RewardAlavanca" script="reward_alavanca.lua"/>
+  	<event type="healthchange" name="RewardAlavancaDamage" script="reward_alavanca.lua"/>
+  	<event type="logout" name="CastleLogout" script="castle24h/castle24h_logout.lua"/>
+	<event type="logout" name="Castle48HLogout" script="castle48h/castle48h_logout.lua"/>
+	<!--<event type="push" name="PushPZBlock" script="push_pz_block.lua"/> -->
+	
+        <event type="kill" name="TaskKill" script="tasks_kill.lua" />
+</creaturescripts>
+    

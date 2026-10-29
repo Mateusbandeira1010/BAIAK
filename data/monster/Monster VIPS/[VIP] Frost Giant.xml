@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Frost Giant" nameDescription="a frost giant" race="undead" experience="16000" speed="400" manacost="490">
+  <health now="13000" max="13000"/>
+  <look type="257" head="20" body="30" legs="40" feet="50" corpse="6068"/>
+  <targetchange interval="2000" chance="5"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="80" attack="130"/>
+    <attack name="ice" interval="2000" chance="5" radius="4" target="1" min="-100" max="-380">
+      <attribute key="shootEffect" value="ice"/>
+      <attribute key="areaEffect" value="icearea"/>
+    </attack>
+    <attack name="ice" interval="2000" chance="5" radius="3" target="0" min="-100" max="-380">
+      <attribute key="areaEffect" value="icearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="22" defense="23"/>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="3500" chance="5">
+    <voice sentence="Hmm Humansoup"/>
+    <voice sentence="Stand still ya tasy snack!"/>
+    <voice sentence="Joh Thun!"/>
+    <voice sentence="Brore Smode!"/>
+    <voice sentence="Horre Sjan Flan!"/>
+  </voices>
+ <loot>
+      <item id="2152" countmax="2" chance="5000"/>
+      <item id="2148" countmax="100" chance="5000"/>
+      <item id="2152" countmax="3" chance="5000"/>
+      <item id="7839" countmax="10" chance="5000"/>
+      <item id="5954" countmax="5" chance="7000"/>
+      <item id="2151" countmax="3" chance="7000"/>
+      <item id="9970" countmax="3" chance="7000"/>
+      <item id="8472" countmax="3" chance="7000"/>                             
+      <item id="2520" chance="10000"/>
+      <item id="2466" chance="10000"/>
+      <item id="2470" chance="10000"/>
+      <item id="2432" chance="10000"/>                      
+</loot>
+
+</monster>
+

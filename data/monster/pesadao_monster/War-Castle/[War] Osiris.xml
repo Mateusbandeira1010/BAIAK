@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="War Osiris" nameDescription="a War Osiris" race="Undead" experience="585000" speed="700" manacost="0">
+  <health now="300000" max="300000"/>
+  <look type="90" corpse="6025"/> 
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattfack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+        <attack name="melee" interval="1500" min="-1000" max="-16000"/>
+        <attack name="death" interval="6000" chance="6" range="5" radius="5" target="0" min="-3000" max="-10000">
+        <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+<attack name="poison" interval="4000" chance="40" range="7" radius="1" target="1" min="-4100" max="-10000">
+<attribute key="shootEffect" value="poison"/>
+<attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="speed" interval="3000" chance="10" target="1" speedchange="-850" duration="60000">
+    <attribute key="areaEffect" value="redshimmer"/>
+	</attack>
+  </attacks>
+  <defenses armor="20" defense="30">
+    <defense name="healing" interval="1300" chance="20" min="2000" max="9000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+	<elements>
+		<element firePercent="0"/>
+		<element icePercent="0"/>
+		<element energyPercent="0"/>
+		<element physicalPercent="0"/>
+		<element holyPercent="0"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+  <summons maxSummons="0">
+    <summon name="fire elemental" interval="10000" chance="100" />
+	<summon name="fire elemental" interval="10000" chance="100" />
+	<summon name="fire elemental" interval="10000" chance="100" />
+	<summon name="fire elemental" interval="10000" chance="100" />
+	<summon name="fire elemental" interval="10000" chance="100" />
+	<summon name="fire elemental" interval="10000" chance="100" />
+	<summon name="fire elemental" interval="10000" chance="100" />
+	<summon name="fire elemental" interval="10000" chance="100" />
+  </summons>
+	<voices interval="4000" chance="40">
+		<voice sentence="Hoje acordei como um Deus!" yell="1"/>
+		<voice sentence="Meu nome e Osiris!" yell="1"/>
+	</voices>
+  <loot>
+    <item id="2152" countmax="35" chance="36450" /><!-- gold coin -->
+    <item id="2160" countmax="5" chance1="3500" chancemax="0"/> 
+  </loot>
+</monster>

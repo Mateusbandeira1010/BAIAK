@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Headpecker" nameDescription="Headpecker" race="venom" experience="25000" speed="600" manacost="0">
+	<health now="10300" max="10300"/>
+    <look type="212" corpse="6068"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="83"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="1"/>
+    </flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-120" max="-200"/>   
+		<attack name="lifedrain" interval="2000" chance="17" min="-190" max="-240" target="1">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="speed" interval="3000" chance="20" target="1" duration="4000" speedchange="-600">
+             <attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="poison" interval="1000" chance="12" radius="3" target="0" min="-40" max="-130">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="50" range="7" target="1" min="-50" max="-150">
+			<attribute key="shootEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="15">
+		<defense name="healing" interval="3000" chance="60" min="1000" max="2500">
+             <attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="-20"/>
+	</elements>
+    <immunities>
+		<immunity poison="1"/>
+		<immunity earth="1"/>
+		<immunity lifedrain="1"/>
+		<immunity manadrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+    </immunities>
+    <voices interval="2000" chance="25">
+		<voice sentence="Big hHAHUWEW!"/>
+		<voice sentence="hHAHUWEW!"/>
+    </voices>
+	<loot capacity="5000">
+<item id="2514" chance="4900"/> <!-- mastermind shield -->
+<item id="2472" chance="2200"/> <!-- magic plate armor -->
+<item id="2470" chance="2350"/> <!-- golden legs -->
+<item id="2520" chance="4100"/> <!-- demon shield -->
+<item id="2492" chance="4100"/> <!-- dragon scale mail -->
+<item id="2476" chance="5100"/> <!-- knight armor -->
+<item id="2498" chance="5800"/> <!-- royal helmet -->
+<item id="2421" chance="4200"/> <!-- thunder hammer -->
+<item id="2466" chance="4200"/> <!-- golden armor -->
+<item id="2152" countmax="55" chance1="100000" chancemax="0"/> <!-- Gold -->
+</loot>
+</monster>

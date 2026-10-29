@@ -1,0 +1,349 @@
+-- Protocol things
+-- NOTE: The maximum number of outfits only applies to cip client, OTC will use 255
+maxProtocolOutfits = 255
+
+dllCheckKick = true -- true = kick enabled, false = kick disabled (default)
+dllCheckKickTime = 5 -- time in seconds (optional usage)
+
+-- Live Cast System
+liveCastEnabled = true
+liveCastProtocolPort = 7173
+liveCastMaxSpectators = 25
+
+-- Cast EXP Bonus System
+-- When enabled, casters receive bonus EXP while they have spectators
+castExpBonus = true -- enable/disable bonus
+castExpBonusPercent = 5 -- percentage bonus (5 = 5%)
+
+-- Reset System
+--resetLevel = 510 -- min level to reset
+--resetStats = 5 -- % more hp and mp on every reset ()
+--resetDmg = 10 -- % attack bonus per reset. 10 = 1%, 100 = 10%, 1000 = 100%. accumulative, keep it low!!!!
+--resetDmgBonus = 5 -- damage bonus per reset for the new system
+--resetSystemEnabled = false -- enable/disable the reset system
+--resetReductionPercentage = 10 -- XP reduction percentage per reset (e.g. 10 = 10%)    
+
+Autoloot_enabled = true
+AutoLoot_BlockIDs = ""
+AutoLoot_MoneyIDs = "2148;2152;2160;9971"
+AutoLoot_MaxItemFree = 5
+AutoLoot_MaxItemPremium = 10
+
+-- Account Manager
+accountManager = true
+namelockManager = false
+newPlayerChooseVoc = false
+newPlayerSpawnPosX = 0
+newPlayerSpawnPosY = 0
+newPlayerSpawnPosZ = 0
+newPlayerTownId = 1
+newPlayerLevel = 8
+newPlayerMagicLevel = 0
+newPlayerHealth = 185
+newPlayerMana = 90
+newPlayerCap = 470
+generateAccountNumber = false
+
+-- Combat settings
+-- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
+worldType = "pvp"
+hotkeyAimbotEnabled = true
+protectionLevel = 100
+killsToRedSkull = 200
+killsToBlackSkull = 250
+pzLocked = 60000
+removeChargesFromRunes = false
+removeChargesFromPotions = false
+removeWeaponAmmunition = false
+removeWeaponCharges = false
+timeToDecreaseFrags = 24 * 60 * 60
+whiteSkullTime = 2 * 60
+stairJumpExhaustion = 100
+experienceByKillingPlayers = false
+pzLockSkullAttacker = false
+allowAutoAttackWithoutExhaustion = false
+allowCastingWhileWalking = true
+
+-- Party Config
+-- required to keep shared experience active.
+-- experienceShareRange: Maximum horizontal distance (in tiles) between party members
+-- experienceShareFloors: Maximum vertical floor difference allowed between party members
+expShareRange = 30
+expShareFloors = 1
+expFromPlayersLevelRange = 2000
+
+-- Connection Config
+-- NOTE: maxPlayers set to 0 means no limit
+-- NOTE: allowWalkthrough is only applicable to players
+-- NOTE: statusCountMaxPlayersPerIp allows you to only count up to X players per IP in status response (0 = disabled)
+ip = "127.0.0.1"
+bindOnlyGlobalAddress = false
+loginProtocolPort = 7171
+gameProtocolPort = 7172
+statusProtocolPort = 7171
+adminPort = 7170
+maxPlayers = 0
+motd = "Bem-vindo ao Baiakinho-OT!"
+onePlayerOnlinePerAccount = true
+allowClones = false
+allowWalkthrough = true
+serverName = "Baiakinho-OT"
+statusTimeout = 5000
+statusCountMaxPlayersPerIp = 0
+replaceKickOnLogin = true
+maxPacketsPerSecond = 800
+
+
+-- Deaths
+-- NOTE: Leave deathLosePercent as -1 if you want to use the default
+-- death penalty formula. For the old formula, set it to 10. For
+-- no skill/experience loss, set it to 0.
+deathLosePercent = -1
+
+-- Houses
+-- NOTE: houseLevel, when buying a house, ask for the necessary level.
+-- NOTE: set housePriceEachSQM to -1 to disable the ingame buy house functionality
+-- NOTE: valid values for houseRentPeriod are: "daily", "weekly", "monthly", "yearly"
+-- use any other value to disable the rent system
+houseLevel = 150
+housePriceEachSQM = 1000
+houseRentPeriod = "never"
+houseOwnedByAccount = false
+houseDoorShowPrice = true
+onlyInvitedCanMoveHouseItems = true
+
+-- Item Usage
+timeBetweenActions = 200
+timeBetweenExActions = 1000
+exhaustPotionMiliSeconds = 1500   -- <-- aqui, em milissegundos
+exhaustItemAtUsePotion = false
+
+-- Fast Potions Configuration
+fastPotions = true
+fastPotionIds = { 26031, 26030, 8473, 7591, 8472, 7588, 26029, 7590, 7589, 7620, 7618, 8704, 8474 }
+
+-- Token Protection Exceptions
+-- Items that can be moved even when token protection is enabled
+tokenProtectionExceptions = { 2160, 2152, 2148, 3976, 2666, 2667, 2668, 2669, 2670, 2671, 2672, 2673, 2674, 2675, 2676, 2677, 2678, 2679, 2680, 2681, 2682, 2683, 2684, 2685, 2686, 2687, 2688, 2689, 2690, 2691, 2692, 2693, 2694, 2695, 2696, 2783, 2784, 2785, 2786, 2787, 2788, 2789, 2790, 2791, 2792, 2727, 2728, 2729, 2730, 2731, 2732, 2733, 2734, 2735, 2736, 2737, 2738, 2739, 2740, 2741, 2742, 2743, 2744 }
+
+-- Teleport Block Configuration
+-- IDs of teleports where it is not allowed to throw items
+blockedTeleportIds = { 1387, 11796, 11797, 12509, 12510 }
+
+-- Rates for reward boss system
+-- If a player meets their share of the expectedScore (totalScore/contributors), they receive a lootRate according to the rewardBaseRate.
+rewardBaseRate = 1
+rewardRateDamageDone = 1
+rewardRateDamageTaken = 0.5
+rewardRateHealingDone = 0.3
+
+-- Scheduler Task Intervals
+MOVE_CREATURE_INTERVAL = 250
+RANGE_MOVE_CREATURE_INTERVAL = 0
+RANGE_MOVE_ITEM_INTERVAL = 250
+RANGE_USE_ITEM_INTERVAL = 250
+RANGE_USE_ITEM_EX_INTERVAL = 250
+RANGE_USE_WITH_CREATURE_INTERVAL = 250
+RANGE_ROTATE_ITEM_INTERVAL = 250
+-- RANGE_BROWSE_FIELD_INTERVAL = 250
+-- RANGE_WRAP_ITEM_INTERVAL = 250
+-- RANGE_REQUEST_TRADE_INTERVAL = 250
+
+-- Map
+-- NOTE: set mapName WITHOUT .otbm at the end
+mapName = "Baiak Yurots"
+mapAuthor = "Baiakinho"
+
+-- Market
+marketOfferDuration = 30 * 24 * 60 * 60
+premiumToCreateMarketOffer = true
+checkExpiredMarketOffersEachMinutes = 60
+maxMarketOffersAtATimePerPlayer = 100
+
+mysqlHost = "127.0.0.1"
+mysqlUser = "tfs"
+mysqlPass = "TfsMemories#2026"
+mysqlDatabase = "memories"
+mysqlPort = 3306
+mysqlKeepAlive = 60
+
+-- Misc.
+-- NOTE: classicAttackSpeed set to true makes players constantly attack at regular
+-- intervals regardless of other actions such as item (potion) use. This setting
+-- may cause high CPU usage with many players and potentially affect performance!
+-- NOTE: forceMonsterTypesOnLoad loads all monster types on startup to validate them.
+-- You can disable it to save some memory if you don't see any errors at startup.
+-- bedOfflineTraining to true enables offline training while in bed. If set to false, the player can only sleep in bed without training.
+-- checkDuplicateStorageKeys checks the values stored in the variables for duplicates.
+allowChangeOutfit = true
+freePremium = true
+kickIdlePlayerAfterMinutes = 15
+maxMessageBuffer = 4
+emoteSpells = true
+classicEquipmentSlots = true
+classicAttackSpeed = true
+showScriptsLogInConsole = false
+showOnlineStatusInCharlist = false
+yellMinimumLevel = 2
+yellAlwaysAllowPremium = false
+minimumLevelToSendPrivate = 1
+premiumToSendPrivate = false
+forceMonsterTypesOnLoad = true
+cleanProtectionZones = true
+bedOfflineTraining = false
+showPlayerLogInConsole = true
+healthGainColour = 95
+manaGainColour = 5
+manaLossColour = 5
+offlineTrainingThreshold = 600
+checkDuplicateStorageKeys = false
+npcsUsingBankMoney = true
+
+-- VIP and Depot limits
+-- NOTE: you can set custom limits per group in data/XML/groups.xml
+vipFreeLimit = 20
+vipPremiumLimit = 100
+depotFreeLimit = 2000
+depotPremiumLimit = 10000
+
+-- Max player allowed on a dummy
+maxAllowedOnADummy = 5
+rateExerciseTrainingSpeed = 1.0
+
+-- World Light
+-- NOTE: if defaultWorldLight is set to true the world light algorithm will
+-- be handled in the sources. set it to false to avoid conflicts if you wish
+-- to make use of the function setWorldLight(level, color)
+defaultWorldLight = true
+
+-- Server Save
+-- NOTE: serverSaveNotifyDuration in minutes
+serverSaveNotifyMessage = true
+serverSaveNotifyDuration = 5
+serverSaveCleanMap = true
+serverSaveClose = false
+serverSaveShutdown = false
+
+-- Player speed
+-- NOTE: Most clients display speed at half its actual value (e.g. 1500 shows as 750).
+-- WARNING: Setting minSpeed too low can cause desync and other client issues.
+-- NOTE: maxPlayerSpeed is the absolute fastest a player can travel, it is not recommended to change this.
+-- 5000 for GODs, 900 for players.
+
+
+playerSpeedPerLevel = 2
+playerMinSpeed = 200
+playerMaxSpeed = 1100
+maxGodSpeed = 5000
+
+
+
+
+-- Rates
+-- NOTE: rateExp is not used if you have enabled stages above
+rateExp = 10
+rateSkill = 30
+rateLoot = 20
+rateMagic = 30
+rateSpawn = 2000
+
+
+-- Experience stages
+-- NOTE: to use a flat experience multiplier, set experienceStages to nil
+-- minlevel and multiplier are MANDATORY
+-- maxlevel is OPTIONAL, but is considered infinite by default
+-- to disable stages, create a stage with minlevel 1 and no maxlevel
+experienceStages = {
+	{ minlevel = 1, maxlevel = 200, multiplier = 60 },
+	{ minlevel = 201, maxlevel = 250, multiplier = 35 },
+	{ minlevel = 251, maxlevel = 300, multiplier = 5.9 },
+	{ minlevel = 301, maxlevel = 350, multiplier = 5.5 },
+	{ minlevel = 351, maxlevel = 400, multiplier = 4.1 },
+	{ minlevel = 401, maxlevel = 450, multiplier = 3.1 },
+	{ minlevel = 451, maxlevel = 500, multiplier = 2.1 },
+	{ minlevel = 501, maxlevel = 550, multiplier = 1.1 },
+	{ minlevel = 551, maxlevel = 600, multiplier =  1 },
+	{ minlevel = 601, maxlevel = 670, multiplier = 0.5 },
+	{ minlevel = 601, multiplier = 1 },
+	
+}
+
+-- Spawn Start Effect & Timer
+-- Placing true makes it take effect when the monster is about to reappear.
+-- timeStartEffect = Effect time that it will do when this point reappears.
+-- timeBetweenTeleportEffects = Time of effect that it will do at the beginning.
+spawnStartEffectEnabled = true
+timeStartEffect = 4200
+timeBetweenTeleportEffects = 1400
+
+-- Offline Training
+-- offlineTrainingEfficiency: 1.0 = 100%, 0.5 = 50% (default)
+offlineTrainingEfficiency = 0.5
+-- Vocation distribution (sum should be 1.0)
+offlineTrainingMageML = 1.0
+offlineTrainingPaladinDist = 0.5
+offlineTrainingPaladinML = 0.25
+offlineTrainingPaladinShield = 0.25
+offlineTrainingKnightMelee = 0.5
+offlineTrainingKnightShield = 0.5
+
+-- Monster Despawn Config
+-- despawnRange is the amount of floors a monster can be from its spawn position
+-- despawnRadius is how many tiles away it can be from its spawn position
+-- removeOnDespawn will remove the monster if true or teleport it back to its spawn position if false
+-- walkToSpawnRadius is the allowed distance that the monster will stay away from spawn position when left with no targets, 0 to disable
+deSpawnRange = 2
+deSpawnRadius = 50
+removeOnDespawn = true
+walkToSpawnRadius = 15
+
+-- Stamina Configs
+-- These options are fully configurable, including regenerating by attacking the trainer or while in a protection zone.
+staminaSystem = true
+timeToRegenMinuteStamina = 3 * 60
+timeToRegenMinutePremiumStamina = 6 * 60
+
+-- Stamina in PZ (Regeneration)
+staminaPz = true
+staminaOrangeDelay = 1
+staminaGreenDelay = 5
+staminaPzGain = 1
+
+-- Stamina in Trainers
+staminaTrainer = true
+staminaTrainerDelay = 5
+staminaTrainerGain = 1
+
+-- Scripts
+warnUnsafeScripts = true
+convertUnsafeScripts = true
+
+-- Startup
+-- NOTE: defaultPriority only works on Windows and sets process
+-- priority, valid values are: "normal", "above-normal", "high"
+defaultPriority = "high"
+startupDatabaseOptimization = false
+
+-- Status Server Information
+ownerName = ""
+ownerEmail = ""
+url = "https://otland.net/"
+location = "Sweden"
+
+-- Server Statistics
+-- time in seconds: 30 = 30 seconds, 0 = disabled
+statsDumpInterval = 0
+-- time in milliseconds: 50 = 0.05 sec, 0 = disabled
+statsSlowLogTime = 0
+-- time in milliseconds: 500 = 0.5 sec, 0 = disabled
+statsVerySlowLogTime = 0
+
+-- Admin Protocol
+adminPort = 7170
+adminPassword = "admin"
+adminLocalhostOnly = true
+adminRequireLogin = true
+adminEncryption = ""
+adminEncryptionData = ""
+adminLogs = true
+adminConnectionsLimit = 1

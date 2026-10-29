@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<monster name="Cursed Demon" nameDescription="Cursed Demon" race="undead" experience="22000" speed="700" manacost="0">
+
+```
+<health now="10000" max="10000"/>
+
+<look type="12" head="114" body="114" legs="94" feet="114" corpse="6068"/>
+
+<targetchange interval="4000" chance="33"/>
+
+<strategy attack="100" defense="0"/>
+
+<flags>
+	<flag summonable="0"/>
+	<flag attackable="1"/>
+	<flag hostile="1"/>
+	<flag illusionable="0"/>
+	<flag convinceable="0"/>
+	<flag pushable="0"/>
+	<flag canpushitems="1"/>
+	<flag canpushcreatures="1"/>
+	<flag staticattack="95"/>
+	<flag targetdistance="1"/>
+	<flag runonhealth="0"/>
+</flags>
+
+<attacks>
+
+	<attack name="melee" interval="2000" min="-250" max="-850"/>
+
+	<attack name="manadrain" interval="2000" chance="10" range="7" min="-250" max="-850"/>
+
+	<attack name="firefield" interval="2000" chance="10" range="7" radius="1" target="1">
+		<attribute key="shootEffect" value="fire"/>
+	</attack>
+
+	<attack name="lifedrain" interval="2000" chance="10" length="8" spread="0" min="-250" max="-850">
+		<attribute key="areaEffect" value="purpleenergy"/>
+	</attack>
+
+	<attack name="energy" interval="2000" chance="10" range="1" min="-250" max="-850">
+		<attribute key="shootEffect" value="energy"/>
+	</attack>
+
+	<attack name="speed" interval="2000" chance="15" radius="1" target="1" speedchange="-700" duration="30000">
+		<attribute key="areaEffect" value="redshimmer"/>
+	</attack>
+
+</attacks>
+
+<defenses armor="55" defense="65">
+
+	<defense name="healing" interval="2000" chance="15" min="750" max="1500">
+		<attribute key="areaEffect" value="blueshimmer"/>
+	</defense>
+
+	<defense name="speed" interval="2000" chance="16" speedchange="1380" duration="3000">
+		<attribute key="areaEffect" value="redshimmer"/>
+	</defense>
+
+</defenses>
+
+<elements>
+	<element physicalPercent="10"/>
+	<element holyPercent="-5"/>
+	<element deathPercent="20"/>
+</elements>
+
+<immunities>
+	<immunity lifedrain="1"/>
+	<immunity paralyze="1"/>
+	<immunity outfit="1"/>
+	<immunity drunk="1"/>
+	<immunity invisible="1"/>
+	<immunity fire="1"/>
+</immunities>
+
+<loot>
+	<item id="2160" countmax="8" chance1="100000" chancemax="0"/>
+	<item id="2160" countmax="3" chance1="100000" chancemax="0"/>
+</loot>
+```
+
+</monster>

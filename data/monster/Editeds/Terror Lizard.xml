@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Terror Lizard" nameDescription="a Terror Lizard" race="blood" experience="25000" speed="600" manacost="0">
+<health now="10000" max="10000"/>
+<look type="364" corpse="6068"/>
+<targetchange interval="2000" chance="5"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="0"/>
+</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-250" max="-850" />
+		<attack name="manadrain" interval="2000" chance="10" range="7" min="-250" max="-850" />
+		<attack name="firefield" interval="2000" chance="10" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="10" length="8" spread="0" min="-250" max="-850">
+			<attribute key="areaEffect" value="purpleenergy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="10" range="1" min="-250" max="-850">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" radius="1" target="1" speedchange="-700" duration="30000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+<defenses armor="16" defense="19">
+		<defense name="healing" interval="2000" chance="15" min="650" max="700">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>	
+	</defenses>
+<elements>
+<element physicalPercent="-20"/>
+<element holyPercent="+5"/>
+<element energyPercent="+5"/>
+<element icePercent="-5"/>
+</elements>
+<immunities>
+<immunity invisibility="0"/>
+<immunity fire="1"/>
+</immunities>
+<voices interval="5000" chance="10">
+		<voice sentence="Ugggh!"/>
+		<voice sentence="Gll"/>
+	</voices>
+<loot>
+		<item id="2160" countmax="8" chance1="100000" chancemax="0"/>
+		<item id="2160" countmax="3" chance1="100000" chancemax="0"/>
+	</loot>
+</monster>

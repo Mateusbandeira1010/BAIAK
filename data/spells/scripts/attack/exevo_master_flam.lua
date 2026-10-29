@@ -1,0 +1,79 @@
+local water = {
+    [490] = true,
+    [491] = true,
+    [492] = true,
+    [493] = true
+}
+
+local combat = Combat()
+
+local meteor = Combat()
+meteor:setParameter(COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
+meteor:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_FIREATTACK)
+
+local meteorWater = Combat()
+meteorWater:setParameter(COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
+meteorWater:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_LOSEENERGY)
+
+local function meteorCallback(player, level, magicLevel)
+    local min = (level / 7.2) + (magicLevel * 7.2)
+    local max = (level / 7) + (magicLevel * 14)
+    return -min, -max
+end
+
+meteor:setCallback(CallBackParam.LEVELMAGICVALUE, meteorCallback)
+meteorWater:setCallback(CallBackParam.LEVELMAGICVALUE, meteorCallback)
+
+local combatArea = {
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0},
+    {0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0},
+    {0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0},
+    {0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0},
+    {1, 1, 1, 0, 1, 3, 1, 1, 0, 1, 1},
+    {0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0},
+    {0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0},
+    {0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0},
+    {0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}
+}
+
+combat:setArea(createCombatArea(combatArea))
+
+local function castMeteor(creature, position)
+    if not Creature(creature) then
+        return
+    end
+
+    local tile = Tile(position)
+    local ground = tile and tile:getGround()
+
+    local selectedCombat = meteor
+    if ground and water[ground:getId()] then
+        selectedCombat = meteorWater
+    end
+
+    local newPosition = Position(position.x - 7, position.y - 6, position.z)
+    newPosition:sendDistanceEffect(position, CONST_ANI_FIRE)
+
+    selectedCombat:execute(creature, Variant(position))
+end
+
+local function callback(creature, position)
+    addEvent(castMeteor, 200, creature:getId(), position)
+end
+
+combat:setCallback(CallBackParam.TARGETTILE, callback)
+
+function onCastSpell(creature, variant)
+    if (creature:getStorageValue(44855) or -1) < 10 then
+        creature:getPosition():sendMagicEffect(CONST_ME_POFF)
+        creature:sendTextMessage(
+            MESSAGE_STATUS_SMALL,
+            "Voce nao possui essa magia pois nao fez a quest das novas magias 500+!"
+        )
+        return false
+    end
+
+    return combat:execute(creature, variant)
+end

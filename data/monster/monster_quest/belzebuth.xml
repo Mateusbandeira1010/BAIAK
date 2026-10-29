@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Belzebuth" nameDescription="Belzebuth" race="undead" experience="980000" speed="600" manacost="0">
+	<health now="700000" max="700000"/>
+	<look type="12" head="115" body="114" legs="114" feet="114" corpse="5527"/>
+	<targetchange interval="10000" chance="20"/>
+	<flags>
+        <flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag staticattack="90"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-17235" max="-25500"/>
+		<attack name="death" interval="2000" chance="25" range="7" radius="7" target="1" min="-10000" max="-15000">
+			<attribute key="shootEffect" value="death"/>
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>
+		<attack name="speed" interval="2000" chance="50" range="7" duration="10000" speedchange="-1400">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="50">
+		<defense name="healing" interval="2000" chance="30" min="10000" max="15000">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+	</defenses>
+	<immunities>
+		<immunity death="1"/>
+		<immunity lifedrain="1"/>
+		<immunity manadrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="25">
+		<voice sentence="Entregue-se a tua preguiça."/>
+		<voice sentence="Deite aos meus pés."/>
+	</voices>
+</monster>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[VIP] Choking Fear" nameDescription="a choking fear" race="undead" experience="30000" speed="380" manacost="0">
+	<health now="10000" max="10000"/>
+	<look type="603" corpse="6068"/>
+	<targetchange interval="4000" chance="5"/>
+<flags>
+	<flag summonable="0"/>
+	<flag attackable="1"/>
+	<flag hostile="1"/>
+	<flag illusionable="0"/>
+	<flag convinceable="0"/>
+	<flag pushable="0"/>
+	<flag canpushitems="0"/>
+	<flag canpushcreatures="1"/>
+	<flag targetdistance="1"/>
+	<flag staticattack="90"/>
+	<flag runonhealth="0"/>
+</flags>
+<attacks>
+	<attack name="melee" interval="2000" skill="95" attack="110" poison="300"/>
+
+	<attack name="poisoncondition" interval="2000" chance="10" length="5" spread="3" target="0" min="-200" max="-300">
+		<attribute key="areaEffect" value="greenspark"/>
+	</attack>
+
+	<attack name="physical" interval="2000" chance="10" radius="1" target="1" min="0" max="-300">
+		<attribute key="shootEffect" value="explosion"/>
+		<attribute key="areaEffect" value="sleep"/>
+	</attack>
+
+	<attack name="speed" interval="2000" chance="20" radius="1" target="1" speedchange="-800" duration="15000">
+		<attribute key="shootEffect" value="explosion"/>
+		<attribute key="areaEffect" value="sleep"/>
+	</attack>
+
+	<attack name="manadrain" interval="2000" chance="10" radius="4" target="0" min="-130" max="-320">
+		<attribute key="areaEffect" value="rednote"/>
+	</attack>
+
+	<attack name="death" interval="2000" chance="20" radius="4" target="1" min="-300" max="-300">
+		<attribute key="shootEffect" value="suddendeath"/>
+		<attribute key="areaEffect" value="mortarea"/>
+	</attack>
+</attacks>
+
+<defenses armor="67" defense="40">
+	<defense name="healing" interval="2000" chance="10" min="80" max="150">
+		<attribute key="areaEffect" value="blueshimmer"/>
+	</defense>
+</defenses>
+
+<elements>
+	<element physicalPercent="20"/>
+	<element energyPercent="20"/>
+	<element earthPercent="20"/>
+	<element icePercent="20"/>
+	<element firePercent="20"/>
+	<element holyPercent="20"/>
+	<element deathPercent="20"/>
+</elements>
+
+<immunities>
+	<immunity paralyze="1"/>
+	<immunity invisible="1"/>
+</immunities>
+
+<voices interval="2000" chance="7">
+	<voice sentence="Ah, sweet air... don't you miss it?"/>
+	<voice sentence="Murr tat muuza!"/>
+	<voice sentence="kchh"/>
+</voices>
+
+<loot>
+	<item id="2152" countmax="2" chance="5000"/>
+	<item id="2148" countmax="100" chance="5000"/>
+	<item id="2152" countmax="3" chance="5000"/>
+	<item id="7839" countmax="10" chance="5000"/>
+	<item id="5954" countmax="5" chance="7000"/>
+	<item id="2151" countmax="3" chance="7000"/>
+	<item id="9970" countmax="3" chance="7000"/>
+	<item id="8472" countmax="3" chance="7000"/>
+	<item id="2520" chance="10000"/>
+	<item id="2466" chance="10000"/>
+	<item id="2470" chance="10000"/>
+	<item id="2432" chance="10000"/>
+</loot>
+
+
+</monster>

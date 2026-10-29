@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Soldado Real" nameDescription="Soldado Real" race="blood" experience="10000" speed="200" manacost="530">
+	<health now="358500" max="358500"/>
+	<look type="131" head="114" body="58" legs="58" feet="114" addons="0" mount="0" corpse="6080"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-4425" max="-5975"/>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<immunities>
+        <immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+		<immunity invisible="1"/>
+    </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Saia daqui invasor!"/>
+		<voice sentence="Invasores não sãoo bem vindos."/>
+		<voice sentence="Saia ou morrerais aqui."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2152" countmax="10" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="12" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="2" chance="100000"/><!-- platinum coin -->
+		<item id="2475" chance="5000"/><!-- warrior helmet -->
+	</loot>
+</monster>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Dream Eater" nameDescription="a Dream Eater" race="undead" experience="25000" speed="570" manacost="0">
+	<health now="10000" max="10000"/>
+	<look type="256" corpse="6068"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+
+	<attacks>
+		<attack name="melee" interval="2000" min="-250" max="-850"/>
+
+		<attack name="manadrain" interval="2000" chance="10" range="7" min="-250" max="-850"/>
+
+		<attack name="firefield" interval="2000" chance="10" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire"/>
+		</attack>
+
+		<attack name="lifedrain" interval="2000" chance="10" length="8" spread="0" min="-250" max="-850">
+			<attribute key="areaEffect" value="purpleenergy"/>
+		</attack>
+
+		<attack name="energy" interval="2000" chance="10" range="1" min="-250" max="-850">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+
+		<attack name="speed" interval="2000" chance="15" radius="1" target="1" speedchange="-700" duration="30000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+
+	<defenses armor="13" defense="26">
+		<defense name="healing" interval="2000" chance="30" min="0" max="1">
+			<attribute key="areaEffect" value="energy"/>
+		</defense>
+	</defenses>
+
+	<elements>
+		<element icePercent="13"/>
+		<element physicalPercent="9"/>
+		<element holyPercent="-10"/>
+		<element firePercent="-10"/>
+	</elements>
+
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+
+	<voices interval="5000" chance="10">
+		<voice sentence="You have disturbed my thoughts!"/>
+		<voice sentence="Let me turn you into something more useful!"/>
+		<voice sentence="Let me taste your brain!"/>
+		<voice sentence="You will be punished!"/>
+	</voices>
+
+	<loot>
+		<item id="2160" countmax="8" chance1="100000" chancemax="0"/>
+		<item id="2160" countmax="3" chance1="100000" chancemax="0"/>
+	</loot>
+</monster>

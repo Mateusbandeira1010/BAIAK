@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="[VIP] Adult Goanna" nameDescription="an adult goanna" race="blood" experience="18000" speed="420">
+<health now="10000" max="10000"/>
+<look type="119" corpse="6068"/>
+<targetchange interval="4000" chance="10"/>
+<flags>
+	<flag summonable="0"/>
+	<flag attackable="1"/>
+	<flag hostile="1"/>
+	<flag convinceable="0"/>
+	<flag pushable="0"/>
+	<flag canpushitems="1"/>
+	<flag canpushcreatures="1"/>
+	<flag targetdistance="1"/>
+	<flag staticattack="90"/>
+	<flag runonhealth="0"/>
+	<flag canwalkonenergy="0"/>
+	<flag canwalkonfire="0"/>
+	<flag canwalkonpoison="0"/>
+</flags>
+<attacks>
+	<attack name="melee" interval="2000" min="0" max="-350" poison="19"/>
+	<attack name="earth" interval="2000" chance="10" min="-250" max="-380">
+		<attribute key="shootEffect" value="earth"/>
+	</attack>
+	<attack name="earth" interval="2000" chance="12" range="3" radius="1" target="1" min="-450" max="-550">
+		<attribute key="shootEffect" value="earth"/>
+		<attribute key="areaEffect" value="explosion"/>
+	</attack>
+	<attack name="earth" interval="2000" chance="15" radius="5" min="-210" max="-300">
+		<attribute key="areaEffect" value="groundshaker"/>
+	</attack>
+</attacks>
+<defenses armor="84" defense="84">
+	<defense name="speed" interval="2000" chance="5" speedchange="500" duration="5000">
+		<attribute key="areaEffect" value="redshimmer"/>
+	</defense>
+</defenses>
+<elements>
+	<element physicalPercent="20"/>
+	<element energyPercent="20"/>
+	<element earthPercent="20"/>
+	<element icePercent="20"/>
+	<element firePercent="20"/>
+	<element holyPercent="20"/>
+	<element deathPercent="20"/>
+</elements>
+<immunities>
+	<immunity paralyze="1"/>
+	<immunity invisible="1"/>
+</immunities>
+<loot>
+	<item id="2152" countmax="2" chance="5000"/>
+	<item id="2148" countmax="100" chance="5000"/>
+	<item id="2152" countmax="3" chance="5000"/>
+	<item id="6529" countmax="10" chance="5000"/>
+	<item id="7591" countmax="3" chance="7000"/>
+	<item id="2514" chance="10000"/>
+	<item id="2472" chance="10000"/>
+	<item id="2645" chance="10000"/>
+</loot>
+</monster>

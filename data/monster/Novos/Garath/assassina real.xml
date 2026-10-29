@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Assassina Real" nameDescription="Assassina Real" race="blood" experience="15000" speed="700" manacost="530">
+	<health now="1442550" max="1442550"/>
+	<look type="156" head="96" body="114" legs="114" feet="19" addons="3" mount="0" corpse="6080"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1000" min="-1050" max="-1250"/>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<immunities>
+        <immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+		<immunity invisible="1"/>
+    </immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Devolva o que pertence ao meu rei."/>
+		<voice sentence="?tudo que pode?"/>
+		<voice sentence="N??orte o suficiente para me derrotar."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2152" countmax="10" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="25" chance="100000"/><!-- platinum coin -->
+		<item id="2152" countmax="41" chance="100000"/><!-- platinum coin -->
+	</loot>
+</monster>

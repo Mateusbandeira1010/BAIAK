@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Boss Brokul" nameDescription="Boss Brokul" race="blood" experience="23000" speed="510">
+    <health now="100000" max="500000" />
+    <look type="325" head="85" body="98" legs="116" feet="85" addons="3" corpse="6068" />
+    <targetchange interval="1000" chance="10" />
+    <flags>
+        <flag summonable="0" />
+        <flag attackable="1" />
+        <flag hostile="1" />
+        <flag illusionable="1" />
+        <flag convinceable="0" />
+        <flag pushable="1" />
+        <flag canpushitems="1" />
+        <flag canpushcreatures="1" />
+        <flag targetdistance="3" />
+        <flag staticattack="60" />
+        <flag runonhealth="60" />
+        <flag canwalkonenergy="0" />
+        <flag canwalkonpoison="0" />
+    </flags>
+  <attacks>
+    <attack name="melee" interval="1000" chance="30" min="-6350" max="-3000"/>
+    <attack name="manadrain" interval="2000" chance="13" range="7" min="-2700" max="-3000"/>
+    <attack name="fire" interval="2000" chance="30" range="7" radius="7" target="1" min="-2700" max="-3000">
+		<attribute key="shootEffect" value="fire"/>
+		<attribute key="areaEffect" value="firearea"/>
+	</attack>
+    <attack name="lifedrain" interval="1000" chance="12" length="8" spread="0" min="-2700" max="-3000">
+		<attribute key="areaEffect" value="purpleenergy"/>
+	</attack>
+	<attack name="speed" interval="2000" chance="15" target="1" speedchange="-750" duration="30000">
+		<attribute key="shootEffect" value="suddendeath"/>
+	</attack>
+	<attack name="energy" interval="3000" chance="10" range="1" target="1" min="-2700" max="-3000">
+		<attribute key="areaEffect" value="purpleenergy"/>
+	</attack>
+  </attacks>
+    <defenses armor="55" defense="55">
+        <defense name="healing" interval="2000" chance="15" min="900" max="1000">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+        <defense name="speed" interval="1000" chance="8" speedchange="290" duration="5000">
+            <attribute key="areaEffect" value="redshimmer"/>
+        </defense>
+    </defenses>
+    <elements>
+        <element physicalPercent="30"/>
+        <element energyPercent="50"/>
+        <element earthPercent="20"/>
+        <element icePercent="15"/>
+        <element holyPercent="15"/>
+        <element deathPercent="20"/>
+    </elements>
+    <immunities>
+        <immunity fire="1"/>
+        <immunity drown="1"/>
+        <immunity paralyze="1"/>
+        <immunity invisible="1"/>
+    </immunities>
+</monster>

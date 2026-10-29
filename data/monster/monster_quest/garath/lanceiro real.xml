@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lanceiro Real" nameDescription="Lanceiro Real" race="blood" experience="120000" speed="700" manacost="530">
+	<health now="480000" max="480000"/>
+	<look type="12" head="1" body="115" legs="115" feet="58" addons="2" mount="0" corpse="6080"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="physical" interval="1000" chance="100" range="8" min="-4950" max="-7275">
+			<attribute key="shootEffect" value="spear"/>
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<immunities>
+        <immunity poison="1"/>
+        <immunity earth="1"/>
+		<immunity holy="1"/>
+        <immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+		<immunity invisible="1"/>
+    </immunities>
+	<voices interval="5000" chance="25">
+		<voice sentence="Hahaha guerreiro fraco!"/>
+		<voice sentence="Não perca seu tempo, sabe que não chegara o fim!"/>
+	</voices>
+	<loot>
+		<item id="2044" chance="10000"/><!-- lamp -->
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2152" countmax="30" chance="100000"/><!-- platinum coin -->
+		<item id="2197" chance="2500"/><!-- stone skin amulet -->
+		<item id="2381" chance="2500"/><!-- halberd -->
+		<item id="2469" chance="2500"/><!-- dragon scale legs -->
+		<item id="2472" chance="2500"/><!-- magic plate armor -->
+		<item id="2498" chance="2500"/><!-- royal helmet -->
+		<item id="2547" countmax="50" chance="25000"/><!-- power bolt -->
+		<item id="2664" chance="5000"/><!-- chain armor -->
+	</loot>
+</monster>

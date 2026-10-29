@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Dont Lure" nameDescription="Dont Lure" race="blood" experience="105000" speed="0" manacost="0">
+  <health now="900000" max="900000"/>
+  <look typeex="10876"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>    
+  </flags>
+    <attacks>
+	<attack name="melee" interval="1000" skill="100" attack="95"/>
+	<attack name="physical" interval="2100" chance="20" range="7" min="-165" max="-245">      
+    </attack>	
+  </attacks>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="3000" chance="10">
+    <voice sentence="Você não vai passar!"/>
+    <voice sentence="Credo... Bate que nem homem!" yell="1"/>       
+	<voice sentence="AUEHAUEHA... Sou muito trapadora!" yell="1"/>
+    <voice sentence="Aaaah..."/>
+  </voices>
+</monster>
